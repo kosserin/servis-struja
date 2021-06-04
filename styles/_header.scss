@@ -1,0 +1,378 @@
+@import 'colors';
+@import 'media-queries';
+
+.background{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: $white;
+    @include mini{
+        background: linear-gradient(to left,rgba($white,.75),rgba($white,.5),rgba($white,.5),rgba($white,.7),rgba($white,.9)), url('../services/21.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .image-background{
+        background:url('../services/21.jpg') no-repeat center;
+        background-size: cover;
+        width: 35%;
+        height: 85vh;
+        position: absolute;
+        top: 10vh;
+        right: 10vw;
+        @include laptop{
+            right: 20px;
+            width: 40%;
+        }
+        @include mini{
+            display: none;
+        }
+
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+ 
+nav{
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 8vh;
+    text-align: center;
+    align-items: center;
+    position: relative;
+
+
+    @include tablet{
+        justify-content: space-around;
+    }
+
+    .nav-logo img{
+        width: 100px;
+        transform: translate(0,30px);
+        @include tablet{
+            width: 50px;
+            transform: translate(0,00px);
+        }
+    }
+
+    .first-logo{
+        display: none;
+
+        & img{
+
+            @include tablet{
+                width: 100px;
+                transform: translateY(5px);
+            }
+
+            @include phone{
+                width: 100px;
+                transform: translateY(5px);
+            }
+        }
+
+        @include tablet{
+            display: flex;
+        }
+    }
+
+    .second-logo{
+
+        @include tablet{
+            display: none;
+        }
+    }
+}
+/* Works only out of nav (: */
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    z-index: 100;
+
+    @include tablet{
+        position: absolute;
+        width: 100vw;
+        height: 92vh;
+        flex-direction: column;
+        top: 8vh;
+        right: 0px;
+        background-color: $white;
+        transform: translateX(100%);
+        transition: transform .3s ease;
+        z-index: 100;
+    }
+
+    & li{
+        margin: 0 40px;
+        @include tablet{
+            margin-bottom: 20px;
+        }
+
+        & a{
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: $blue;
+            position: relative;
+            text-align: center;
+
+            @include tablet{
+                font-size: 1.2rem;
+            }
+        }
+
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+ 
+.header-container{
+    width: 90vw;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+    margin: auto;
+
+    @include laptop{
+    padding-top: 10%;
+    }
+
+    @include mini{
+        padding-top: 15%;
+    }
+
+    @include tablet{
+        padding-top: 20%;
+    }
+
+    @include phone{
+        padding-top: 35%;
+    }
+
+    @include fold{
+        padding-top: 35%;
+    }
+
+    & h1{
+        text-transform: uppercase;
+        color: $blue;
+        width: 50%;
+        font-size: 3.5rem;
+        line-height: 65px;
+
+        @include laptop{
+            font-size: 3.3rem;
+            line-height: 50px;
+        }
+
+        @include mini{
+            font-size: 2.8rem;
+            width: 60%;
+
+        }
+
+        @include tablet{
+            font-size: 2.5rem;
+            line-height: 40px;
+        }
+
+        @include phone{
+            text-align: left;
+            width: 100%;
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+        }
+
+        @include fold{
+            font-size: 1.5rem;
+            width: 100%;
+            line-height: 30px;
+            text-align: left;
+        }
+    }
+
+    & p{
+        color: rgba($blue,.8);
+        width: 50%;
+        font-size: 1rem;
+
+        @include mini{
+            width: 55%;
+        }
+
+        @include tablet{
+            width: 70%;
+        }
+
+        @include phone{
+            text-align: left;
+            width: 80%;
+            font-size: .8rem;
+            margin: 0 auto 0 0;
+        }
+
+        @include fold{
+            font-size: .8rem;
+            width: 95%;
+            text-align: left;
+        }
+    }
+
+    & .buttons{
+        margin-top: 40px;
+
+        @include phone{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            margin-top: 10px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        & a{
+            text-decoration: none;
+            transition: all .3s ease;
+            margin: 10px 0;
+            font-size: .85rem;
+
+            @include phone{
+                font-size: .8rem;
+            }
+
+            @include fold{
+                font-size: .7rem;
+            }
+        }
+
+        & a:nth-child(1){
+            padding: 1rem 2rem;
+            color: $white;
+            background-color: $blue;
+            border-radius: 30px;
+            margin-right: 10px;
+
+            @include phone{
+                padding: 1rem 2rem;
+            }   
+
+            @include fold{
+                padding: 1rem 1rem;
+                margin-right: 5px;
+            }
+
+            &:hover{
+                color: $blue;
+                background-color: $white;
+            }
+        }
+
+        & a:nth-child(2){
+            padding: 1rem 2.5rem;
+            color: $blue;
+            background-color: transparent;
+            border-radius: 30px;
+            border: 1px solid $blue;
+            transition: all .3s ease;
+
+            @include phone{
+                padding: 1rem 3rem;
+            }
+
+            @include fold{
+                padding: 1rem 1.2rem;
+            }
+
+            &:hover{
+                color: $white;
+                background-color: $blue;
+            }
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+ 
+.experience-container{
+    pointer-events: none;
+    display: flex;
+    background: rgba($blue,.1);
+    padding: 20px;
+    width: 230px;
+    position: absolute;
+    bottom: 5%;
+    left: 0%;
+
+    @include fold{
+        bottom: 1%;
+        right: 15%;
+    }
+
+    & h1{
+        width: 110px;
+        color: $blue;
+
+        @include tablet{
+            font-size: 3.5rem;
+            transform: translateY(5px);
+        }
+    }
+
+    & .experience{
+        display: flex;
+    }
+
+    & p{
+        transform: translateY(10px);
+        color: $blue;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        @include tablet{
+            transform: translateY(0px);
+        }
+    }
+}
+
+.burger{
+
+    @include tablet{
+        cursor: pointer;
+        margin-right: 50px;
+
+        & div{
+            width: 25px;
+            height: 3px;
+            margin: 5px;
+            background-color: $blue;
+            transition: transform .3s ease;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+ 
+.nav-active{
+    transform: translateX(0);
+}
+
+.toggle .line1{
+    transform: rotate(45deg) translate(5px,6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(-45deg) translate(5px,-6px);
+}

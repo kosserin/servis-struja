@@ -1,0 +1,75 @@
+@import 'colors';
+@import 'media-queries';
+
+/*  */
+.copyright{
+    color: $white;
+    background-color: $blue;
+    text-align: center;
+    padding: 5px 0;
+    font-size: .9rem;
+    font-weight: 300;
+}
+footer{
+    padding-top: 30px;
+    background: $light;
+
+    .footer-container{
+        width: 85vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+
+        .left-side{
+
+
+            img{
+                width: 120px;
+            }
+
+            h1{
+                color: $blue;
+                font-weight: 500;
+                font-size: 1rem;
+                transform: translateY(-30px);
+            }
+
+            p{
+                color: $blue;
+                transform: translateY(-30px);
+            }
+        }
+
+        .right-side{
+            display: flex;
+            min-width: 50vw;
+            justify-content: flex-end;
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                margin: 0 50px;
+
+                h2{
+                    color: $blue;
+                }
+
+                li{
+
+                    a{
+                        text-decoration: none;
+                        font-size: .8rem;
+                        color: rgb(204, 204, 204);
+
+                        &:hover{
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

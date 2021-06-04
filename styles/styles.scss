@@ -1,0 +1,22 @@
+@import 'colors';
+@import 'media-queries';
+@import 'header';
+@import 'main';
+@import 'footer';
+@import 'about';
+@import 'contact';
+@import 'services';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: $white;
+}

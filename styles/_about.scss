@@ -1,0 +1,56 @@
+@import 'colors';
+@import 'media-queries';
+
+.about-nav{
+    background: $blue;
+}
+.second-logo{
+background: $blue;
+padding-bottom: 5px;
+}
+.index-logo{
+    background: transparent;
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    & .image-container{
+        height: 500px;
+        width: 100vw;
+        background: url('../who.jpg');
+        background-size: cover;
+        background-position: 50% 60%;
+        background-repeat: no-repeat;
+    }
+    & .text-container{
+        width: 70%;
+        margin: auto;
+        padding: 50px 0;
+        color: $blue;
+        @include phone{
+            width: 80%;
+            text-align: left;
+        }
+        & h1{
+            font-size: 3rem;
+            @include phone{
+                font-size: 2rem;
+            }
+        }
+        & p{
+            @include phone{
+                font-size: 0.8rem;
+            }
+        }
+        & p span{
+            font-weight: 500;
+        }
+        & a{
+            text-decoration: none;
+            color: $blue;
+        }
+        & .bold-service{
+            font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,430 @@
+@import 'colors';
+@import 'media-queries';
+
+.nav-logo{
+    display: none !important;
+}
+.section1{
+    width: 100vw;
+    margin: 300px 0 200px 0;
+    .services{
+        display: flex;
+        justify-content: center;
+
+        .service{
+            width: 150px;
+            height: 200px;
+            margin: 0 5px;
+            @include tablet{
+                width: 100px;
+            }
+            @include phone{
+                width: 70px;
+                height: 120px;
+            }
+        }
+        .service:first-child{
+            background: url('../section1/1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .service:nth-child(2){
+            background: url('../section1/21.jpg');
+                        background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: translateY(-40px);
+        }
+        .service:nth-child(3){
+            background: url('../section1/23.jpg');
+                        background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: translateY(-80px);
+        }
+        .service:nth-child(4){
+            background: url('../section1/28.jpg');
+                        background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: translateY(-40px);
+        }
+        .service:nth-child(5){
+            background: url('../section1/6.jpg');
+                        background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    h1{
+        text-align: center;
+        font-size: 2.3rem;
+        color: $blue;
+        margin-top: 50px;
+        font-weight: 600;
+
+        @include phone{
+            font-size: 1.5rem;
+        }
+    }
+
+    p{
+        text-align: center;
+        color: rgba($blue, $alpha:.8);
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 30px;
+
+        @include phone{
+            width: 85%;
+        }
+    }
+
+    .icons{
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+
+        .icon{
+            margin: 0 50px;
+
+            @include tablet{
+                margin: 0 25px;
+            }
+
+            @include phone{
+                margin: 0 10px;
+            }
+
+            i{
+                font-size: 3rem;
+                color: $blue;
+
+                @include phone{
+                    font-size: 2rem;
+                    transform: translateY(5px);
+                }
+            }
+
+            img{
+                width: 50px;
+
+                @include phone{
+                    width: 36px;
+                }
+            }
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+/* important */
+.fade-in{
+    opacity: 0;
+    transition:  opacity  250ms ease-in;
+}
+/* important */
+.fade-in.appear{
+    opacity: 1;
+}
+/* important */
+.from-left{
+    transform: translateX(-50%);
+}
+/* important */
+.from-right{
+    transform: translateX(50%);
+}
+.from-down{
+    transform: translateY(5%);
+}
+.from-down.appear{
+    transform: translateY(0);
+}
+/* important */
+.from-left,.from-right,.from-down{
+    transition: transform 400ms ease-in;
+}
+/* important */
+.from-left.appear,.from-right.appear{
+    transform: translateX(0);
+}
+.scale{
+    transform: scale(0,1);
+    transition: transform 300ms ease-in;
+}
+.scale.appear{
+    transform: scale(1,1);
+}
+
+///////////////////////////////////////////////////////////////////////
+ 
+.section2{
+    background: $white;
+
+    .section2-container{
+        position: relative;
+        padding: 200px 0 150px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+        min-height: 400px;
+        height: fit-content;
+        width: 80%;
+        margin: auto;
+        position: relative;
+
+        @include phone{
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            width: 90%;
+            padding: 100px 0 100px 0;
+        }
+
+        & .image-container{
+            position: relative;
+            height: 400px;
+            background: url('../who.jpg');
+            background-size: cover;
+            background-position: 40% 80%;
+            background-repeat: no-repeat;
+            z-index: 2;
+
+            @include phone{
+                height: 350px;
+                margin-bottom: 20px;
+            }
+        }
+
+        & .shape{
+            position: absolute;
+            height: 800px;
+            width: 100vw;
+            background:$light;
+            z-index: 1;
+            top: 000px;
+            left: -10vw;
+            }
+        }
+
+        & .text-container{
+                position: relative;
+                width: 80%;
+                margin: auto;
+                color: $blue;
+                z-index: 2;
+
+                @include mini{
+                    width: 95%;
+                }
+
+                & h1{
+                    font-size: 3rem;
+                    position: relative;
+                    text-align: left;
+                    width: 70%;
+                    margin:  0 auto 20px auto;
+    
+                    @include laptop{
+                        font-size: 2.2rem;
+                        margin-bottom: 10px;
+                        width: 85%;
+                    }
+
+                    @include mini{
+                        width: 85%;
+                    }
+                }
+
+                & p{
+                    width: 70%;
+                    margin: 0 auto;
+                    text-align: left;
+
+                    @include laptop{
+                        width: 85%;
+                    }
+
+                    @include phone{
+                        font-size: 0.8rem;
+                    }
+                }
+
+                & p span{
+                    font-weight: 500;
+                }
+
+                .lower{
+                    display: none;
+                }
+
+                & .read-more-container{
+                    display: flex;
+                    justify-content: flex-end;
+
+                    & a{
+                        color: $blue;
+                        text-decoration: none;
+
+                        @include tablet{
+                            font-size: .9rem;
+                        }
+
+                        & img{
+                            color: $blue;
+                            transform: translate(0,8px);
+                            transition: transform .3s ease;
+                        }
+
+                        &:hover img{
+                            transform: translate(15px,8px);
+                        }
+                    }
+                }
+        }
+    }
+
+///////////////////////////////////////////////////////////////////////
+ 
+.section3{
+    position: relative;
+    width: 100vw;
+    min-height: 500px;
+    padding-top: 100px;
+    text-align: center;
+    display: flex;
+    
+    @include mini{
+        flex-direction: column;
+    }
+
+    .promo-text{
+        width: 50%;
+
+        @include mini{
+            width: 90%;
+            margin: 0 auto;
+            order: 2;
+        }
+    }
+
+    & h1{
+        font-size: 2rem;
+        color: $blue;
+        width: 100%;
+        margin: 0 auto 40px auto;
+        @include laptop{
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        @include mini{
+            margin-top: 50px;
+        }
+        @include phone{
+            font-size: 1.5rem;
+        }
+        @include fold{
+            font-size: 1.5rem;
+        }
+    }
+    & p{
+        width: 70%;
+        margin: 0 auto;
+        line-height: 28px;
+        color: $blue;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        text-align: left;
+
+        @include laptop{
+            width: 85%;
+            font-size: .9rem;
+        }
+
+        @include mini{
+            width: 70%;
+        }
+
+        @include phone{
+            width: 80%;
+            font-size: .8rem;
+        }
+    }
+
+    & a{
+        display: inline-block;
+        margin: 20px 10px;
+        text-decoration: underline;
+        text-transform: uppercase;
+        padding: 1rem 3rem;
+        border-radius: 40px;
+        color: $blue;
+        font-weight: 600;
+    }
+
+    & .promo-image{
+        width: 50%;
+        
+        @include mini{
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
+
+/* #fifth{
+    margin: 200px 0;
+    background-color: $white;
+    text-align: center;
+    & h1{
+        font-size: 3rem;
+        color: $blue;
+        position: relative;
+        margin-bottom: 30px;
+    }
+} */
+
+/* .sponsors{
+    display: flex;
+    width: 100%;
+    margin: 50px auto;
+    justify-content: center;
+    align-items: center;
+    background: $light;
+    @include tablet{
+        width: 80%;
+    }
+    & .sponsor{
+        width: 150px;
+        & img{
+            width: 100%;
+            opacity: .7;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    & .sponsor:first-child{
+        transform: translateY(35%);
+    }
+    & .sponsor:first-child.appear{
+        transform: translateY(5%);
+    }
+    & .sponsor:nth-child(2){
+        transform: translateY(30%);
+    }
+    & .sponsor:nth-child(2).appear{
+        transform: translateY(0%);
+    }
+} */
+
+///////////////////////////////////////////////////////////////////////
+ 
