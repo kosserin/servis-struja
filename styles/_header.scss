@@ -7,7 +7,7 @@
     height: 100vh;
     background: $white;
     @include mini{
-        background: linear-gradient(to left,rgba($white,.75),rgba($white,.5),rgba($white,.5),rgba($white,.7),rgba($white,.9)), url('../services/21.jpg');
+        background: linear-gradient(to top,rgba($white,.75),rgba($white,.7),rgba($white,.8),rgba($white,.8),rgba($white,.9)), url('../services/21.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -16,14 +16,20 @@
     .image-background{
         background:url('../services/21.jpg') no-repeat center;
         background-size: cover;
-        width: 35%;
+        width: 47%;
         height: 85vh;
         position: absolute;
         top: 10vh;
-        right: 10vw;
+        right: 2vw;
         @include laptop{
             right: 20px;
+            width: 45%;
+            height: 80vh;
+        }
+        @include miniLaptop{
+            right: 20px;
             width: 40%;
+            height: 70vh;
         }
         @include mini{
             display: none;
@@ -46,7 +52,8 @@ nav{
 
 
     @include tablet{
-        justify-content: space-around;
+        /* justify-content: space-around; */
+        justify-content: flex-end;
     }
 
     .nav-logo img{
@@ -147,19 +154,19 @@ nav{
     }
 
     @include mini{
-        padding-top: 15%;
+        padding-top: 10%;
     }
 
     @include tablet{
-        padding-top: 20%;
+        padding-top: 5%;
     }
 
     @include phone{
-        padding-top: 35%;
+        padding-top: 10%;
     }
 
     @include fold{
-        padding-top: 35%;
+        padding-top: 15%;
     }
 
     & h1{
@@ -170,13 +177,15 @@ nav{
         line-height: 65px;
 
         @include laptop{
-            font-size: 3.3rem;
+            font-size: 2.8rem;
             line-height: 50px;
         }
 
         @include mini{
             font-size: 2.8rem;
-            width: 60%;
+            text-align: center;
+            margin: 0 auto;
+            width: 70%;
 
         }
 
@@ -186,9 +195,8 @@ nav{
         }
 
         @include phone{
-            text-align: left;
-            width: 100%;
-            font-size: 2.3rem;
+            width: 90%;
+            font-size: 2.2rem;
             margin-bottom: 10px;
         }
 
@@ -196,47 +204,46 @@ nav{
             font-size: 1.5rem;
             width: 100%;
             line-height: 30px;
-            text-align: left;
         }
     }
 
     & p{
-        color: rgba($blue,.8);
-        width: 50%;
+        color: $blue;
+        width: 40%;
         font-size: 1rem;
 
         @include mini{
-            width: 55%;
-        }
-
-        @include tablet{
+            text-align: center;
+            margin: 0 auto;
             width: 70%;
+            margin-top: 10px;
         }
 
         @include phone{
-            text-align: left;
             width: 80%;
-            font-size: .8rem;
-            margin: 0 auto 0 0;
+            font-size: .9rem;
+            margin: 0 auto 0 ;
         }
 
         @include fold{
             font-size: .8rem;
             width: 95%;
-            text-align: left;
         }
     }
 
     & .buttons{
         margin-top: 40px;
-
-        @include phone{
+        @include mini{
             display: flex;
-            flex-direction: row;
+            justify-content: center;
+        }
+        @include phone{
+            flex-direction: column;
             text-align: center;
             margin-top: 10px;
             margin: 0 auto;
             width: 100%;
+            align-items: center;
         }
 
         & a{
@@ -244,13 +251,15 @@ nav{
             transition: all .3s ease;
             margin: 10px 0;
             font-size: .85rem;
+            font-weight: 500;
 
             @include phone{
                 font-size: .8rem;
+                width: 200px;
             }
 
             @include fold{
-                font-size: .7rem;
+                font-size: .8rem;
             }
         }
 
@@ -262,7 +271,7 @@ nav{
             margin-right: 10px;
 
             @include phone{
-                padding: 1rem 2rem;
+                padding: 1.1rem 2rem;
             }   
 
             @include fold{
@@ -312,6 +321,10 @@ nav{
     bottom: 5%;
     left: 0%;
 
+    @include mini{
+    background: $white;
+    }
+
     @include fold{
         bottom: 1%;
         right: 15%;
@@ -321,9 +334,13 @@ nav{
         width: 110px;
         color: $blue;
 
-        @include tablet{
+        @include mini{
             font-size: 3.5rem;
-            transform: translateY(5px);
+            transform: translateY(12px);
+        }
+
+        @include phone{
+            transform: translateY(3px);
         }
     }
 
@@ -337,8 +354,12 @@ nav{
         text-transform: uppercase;
         font-weight: bold;
 
-        @include tablet{
-            transform: translateY(0px);
+        @include mini{
+            transform: translateY(-5px);
+        }
+        
+        @include phone{
+            transform: translateY(-2px);
         }
     }
 }

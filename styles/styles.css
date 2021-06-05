@@ -7,8 +7,8 @@
 
 @media screen and (max-width: 970px) {
   .background {
-    background: -webkit-gradient(linear, right top, left top, from(rgba(248, 235, 255, 0.75)), color-stop(rgba(248, 235, 255, 0.5)), color-stop(rgba(248, 235, 255, 0.5)), color-stop(rgba(248, 235, 255, 0.7)), to(rgba(248, 235, 255, 0.9))), url("../services/21.jpg");
-    background: linear-gradient(to left, rgba(248, 235, 255, 0.75), rgba(248, 235, 255, 0.5), rgba(248, 235, 255, 0.5), rgba(248, 235, 255, 0.7), rgba(248, 235, 255, 0.9)), url("../services/21.jpg");
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(248, 235, 255, 0.75)), color-stop(rgba(248, 235, 255, 0.7)), color-stop(rgba(248, 235, 255, 0.8)), color-stop(rgba(248, 235, 255, 0.8)), to(rgba(248, 235, 255, 0.9))), url("../services/21.jpg");
+    background: linear-gradient(to top, rgba(248, 235, 255, 0.75), rgba(248, 235, 255, 0.7), rgba(248, 235, 255, 0.8), rgba(248, 235, 255, 0.8), rgba(248, 235, 255, 0.9)), url("../services/21.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,17 +18,26 @@
 .background .image-background {
   background: url("../services/21.jpg") no-repeat center;
   background-size: cover;
-  width: 35%;
+  width: 47%;
   height: 85vh;
   position: absolute;
   top: 10vh;
-  right: 10vw;
+  right: 2vw;
 }
 
 @media screen and (max-width: 1280px) {
   .background .image-background {
     right: 20px;
+    width: 45%;
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .background .image-background {
+    right: 20px;
     width: 40%;
+    height: 70vh;
   }
 }
 
@@ -59,8 +68,10 @@ nav {
 
 @media screen and (max-width: 768px) {
   nav {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    /* justify-content: space-around; */
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -202,25 +213,25 @@ nav .first-logo {
 
 @media screen and (max-width: 970px) {
   .header-container {
-    padding-top: 15%;
+    padding-top: 10%;
   }
 }
 
 @media screen and (max-width: 768px) {
   .header-container {
-    padding-top: 20%;
+    padding-top: 5%;
   }
 }
 
 @media screen and (max-width: 600px) {
   .header-container {
-    padding-top: 35%;
+    padding-top: 10%;
   }
 }
 
 @media screen and (max-width: 320px) {
   .header-container {
-    padding-top: 35%;
+    padding-top: 15%;
   }
 }
 
@@ -234,7 +245,7 @@ nav .first-logo {
 
 @media screen and (max-width: 1280px) {
   .header-container h1 {
-    font-size: 3.3rem;
+    font-size: 2.8rem;
     line-height: 50px;
   }
 }
@@ -242,7 +253,9 @@ nav .first-logo {
 @media screen and (max-width: 970px) {
   .header-container h1 {
     font-size: 2.8rem;
-    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
   }
 }
 
@@ -255,9 +268,8 @@ nav .first-logo {
 
 @media screen and (max-width: 600px) {
   .header-container h1 {
-    text-align: left;
-    width: 100%;
-    font-size: 2.3rem;
+    width: 90%;
+    font-size: 2.2rem;
     margin-bottom: 10px;
   }
 }
@@ -267,34 +279,29 @@ nav .first-logo {
     font-size: 1.5rem;
     width: 100%;
     line-height: 30px;
-    text-align: left;
   }
 }
 
 .header-container p {
-  color: rgba(6, 4, 72, 0.8);
-  width: 50%;
+  color: #060448;
+  width: 40%;
   font-size: 1rem;
 }
 
 @media screen and (max-width: 970px) {
   .header-container p {
-    width: 55%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .header-container p {
+    text-align: center;
+    margin: 0 auto;
     width: 70%;
+    margin-top: 10px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .header-container p {
-    text-align: left;
     width: 80%;
-    font-size: .8rem;
-    margin: 0 auto 0 0;
+    font-size: .9rem;
+    margin: 0 auto 0;
   }
 }
 
@@ -302,7 +309,6 @@ nav .first-logo {
   .header-container p {
     font-size: .8rem;
     width: 95%;
-    text-align: left;
   }
 }
 
@@ -310,19 +316,30 @@ nav .first-logo {
   margin-top: 40px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 970px) {
   .header-container .buttons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header-container .buttons {
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
     margin-top: 10px;
     margin: 0 auto;
     width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -332,17 +349,19 @@ nav .first-logo {
   transition: all .3s ease;
   margin: 10px 0;
   font-size: .85rem;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 600px) {
   .header-container .buttons a {
     font-size: .8rem;
+    width: 200px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .header-container .buttons a {
-    font-size: .7rem;
+    font-size: .8rem;
   }
 }
 
@@ -356,7 +375,7 @@ nav .first-logo {
 
 @media screen and (max-width: 600px) {
   .header-container .buttons a:nth-child(1) {
-    padding: 1rem 2rem;
+    padding: 1.1rem 2rem;
   }
 }
 
@@ -412,6 +431,12 @@ nav .first-logo {
   left: 0%;
 }
 
+@media screen and (max-width: 970px) {
+  .experience-container {
+    background: #F8EBFF;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .experience-container {
     bottom: 1%;
@@ -424,11 +449,18 @@ nav .first-logo {
   color: #060448;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 970px) {
   .experience-container h1 {
     font-size: 3.5rem;
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .experience-container h1 {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
   }
 }
 
@@ -446,10 +478,17 @@ nav .first-logo {
   font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 970px) {
   .experience-container p {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .experience-container p {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
   }
 }
 
@@ -645,6 +684,34 @@ nav .first-logo {
   }
 }
 
+.section1 .call-to-action {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section1 .call-to-action a {
+  text-decoration: none;
+  background: #060448;
+  color: #F8EBFF;
+  padding: 1.1rem 4rem;
+  border-radius: 30px;
+  border: 1px solid #060448;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.section1 .call-to-action a:hover {
+  background: transparent;
+  color: #060448;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
 /* important */
 .fade-in {
   opacity: 0;
@@ -670,8 +737,18 @@ nav .first-logo {
 }
 
 .from-down {
-  -webkit-transform: translateY(5%);
-          transform: translateY(5%);
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+.from-up.appear {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.from-up {
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
 }
 
 .from-down.appear {
@@ -680,7 +757,7 @@ nav .first-logo {
 }
 
 /* important */
-.from-left, .from-right, .from-down {
+.from-left, .from-right, .from-down, .from-up {
   -webkit-transition: -webkit-transform 400ms ease-in;
   transition: -webkit-transform 400ms ease-in;
   transition: transform 400ms ease-in;
@@ -707,13 +784,73 @@ nav .first-logo {
           transform: scale(1, 1);
 }
 
+.section4 {
+  padding: 50px 0 200px 0;
+}
+
+.section4 .section4-container {
+  background: url("../services/6.jpg") no-repeat center;
+  background-size: cover;
+  width: 70vw;
+  height: 70vh;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 970px) {
+  .section4 .section4-container {
+    height: 50vh;
+    width: 80vw;
+  }
+}
+
+.section4 .section4-text {
+  width: 60%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .section4 .section4-text {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section4 .section4-text {
+    width: 85%;
+  }
+}
+
+.section4 .section4-text h1 {
+  color: #060448;
+  text-align: center;
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .section4 .section4-text h1 {
+    font-size: 2rem;
+  }
+}
+
+.section4 .section4-text p {
+  color: #060448;
+  text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+  .section4 .section4-text p {
+    font-size: .9rem;
+  }
+}
+
 .section2 {
   background: #F8EBFF;
 }
 
 .section2 .section2-container {
   position: relative;
-  padding: 200px 0 150px 0;
+  padding: 100px 0 100px 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
@@ -755,12 +892,18 @@ nav .first-logo {
 
 .section2 .section2-container .shape {
   position: absolute;
-  height: 800px;
+  height: 600px;
   width: 100vw;
   background: #7377c0;
   z-index: 1;
   top: 000px;
   left: -10vw;
+}
+
+@media screen and (max-width: 768px) {
+  .section2 .section2-container .shape {
+    height: 800px;
+  }
 }
 
 .section2 .text-container {
@@ -864,7 +1007,7 @@ nav .first-logo {
   position: relative;
   width: 100vw;
   min-height: 500px;
-  padding-top: 100px;
+  padding-top: 200px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1028,7 +1171,7 @@ nav .first-logo {
 } */
 /*  */
 .copyright {
-  color: #F8EBFF;
+  color: #dfdfdf;
   background-color: #060448;
   text-align: center;
   padding: 5px 0;
@@ -1051,6 +1194,10 @@ footer .footer-container {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 20px;
+}
+
+footer .footer-container .left-side {
+  padding-top: 50px;
 }
 
 footer .footer-container .left-side img {
