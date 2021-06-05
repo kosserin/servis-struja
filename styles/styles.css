@@ -191,6 +191,24 @@ nav .first-logo {
   }
 }
 
+.nav-links .contact-tag {
+  display: inline-block !important;
+  border: 1px solid #060448 !important;
+  padding: .5rem 2rem;
+  border-radius: 30px;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.nav-links .contact-tag:hover {
+  background: #060448;
+  color: #F8EBFF;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
 .header-container {
   width: 90vw;
   height: 92vh;
@@ -366,9 +384,9 @@ nav .first-logo {
 }
 
 .header-container .buttons a:nth-child(1) {
-  padding: 1rem 2rem;
+  padding: 1.2rem 2.3rem;
   color: #F8EBFF;
-  background-color: #060448;
+  background: #060448;
   border-radius: 30px;
   margin-right: 10px;
 }
@@ -784,66 +802,6 @@ nav .first-logo {
           transform: scale(1, 1);
 }
 
-.section4 {
-  padding: 50px 0 200px 0;
-}
-
-.section4 .section4-container {
-  background: url("../services/6.jpg") no-repeat center;
-  background-size: cover;
-  width: 70vw;
-  height: 70vh;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 970px) {
-  .section4 .section4-container {
-    height: 50vh;
-    width: 80vw;
-  }
-}
-
-.section4 .section4-text {
-  width: 60%;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 768px) {
-  .section4 .section4-text {
-    width: 75%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .section4 .section4-text {
-    width: 85%;
-  }
-}
-
-.section4 .section4-text h1 {
-  color: #060448;
-  text-align: center;
-  font-size: 3rem;
-  margin: 20px 0;
-}
-
-@media screen and (max-width: 600px) {
-  .section4 .section4-text h1 {
-    font-size: 2rem;
-  }
-}
-
-.section4 .section4-text p {
-  color: #060448;
-  text-align: justify;
-}
-
-@media screen and (max-width: 600px) {
-  .section4 .section4-text p {
-    font-size: .9rem;
-  }
-}
-
 .section2 {
   background: #F8EBFF;
 }
@@ -851,23 +809,37 @@ nav .first-logo {
 .section2 .section2-container {
   position: relative;
   padding: 100px 0 100px 0;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   min-height: 400px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 80%;
+  width: 90%;
   margin: auto;
   position: relative;
+  /*         & .shape{
+            position: absolute;
+            height: 500px;
+            width: 300px;
+            background:$light;
+            z-index: 0;
+            top: 50px;
+            left: -50px;
+
+            @include mini{
+                height: 850px;
+            }
+            } */
 }
 
 @media screen and (max-width: 600px) {
   .section2 .section2-container {
-    -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 90%;
     padding: 100px 0 100px 0;
   }
@@ -876,11 +848,12 @@ nav .first-logo {
 .section2 .section2-container .image-container {
   position: relative;
   height: 400px;
+  width: 100%;
   background: url("../who.jpg");
   background-size: cover;
   background-position: 40% 80%;
   background-repeat: no-repeat;
-  z-index: 2;
+  z-index: 1;
 }
 
 @media screen and (max-width: 600px) {
@@ -890,25 +863,9 @@ nav .first-logo {
   }
 }
 
-.section2 .section2-container .shape {
-  position: absolute;
-  height: 600px;
-  width: 100vw;
-  background: #7377c0;
-  z-index: 1;
-  top: 000px;
-  left: -10vw;
-}
-
-@media screen and (max-width: 768px) {
-  .section2 .section2-container .shape {
-    height: 800px;
-  }
-}
-
 .section2 .text-container {
   position: relative;
-  width: 80%;
+  width: 100%;
   margin: auto;
   color: #060448;
   z-index: 2;
@@ -924,7 +881,7 @@ nav .first-logo {
   font-size: 3rem;
   position: relative;
   text-align: left;
-  width: 70%;
+  width: 85%;
   margin: 0 auto 20px auto;
 }
 
@@ -939,11 +896,12 @@ nav .first-logo {
 @media screen and (max-width: 970px) {
   .section2 .text-container h1 {
     width: 85%;
+    text-align: center;
   }
 }
 
 .section2 .text-container p {
-  width: 70%;
+  width: 85%;
   margin: 0 auto;
   text-align: left;
 }

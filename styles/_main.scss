@@ -191,74 +191,21 @@
 
 ///////////////////////////////////////////////////////////////////////
  
-.section4{
-    padding: 50px 0 200px 0;
-    .section4-container{
-        background: url('../services/6.jpg') no-repeat center;
-        background-size: cover;
-        width: 70vw;
-        height: 70vh;
-        margin: 0 auto;
-
-        @include mini{
-            height: 50vh;
-            width: 80vw;
-        }
-    }
-
-    .section4-text{
-        width: 60%;
-        margin: 0 auto;
-
-        @include tablet{
-            width: 75%;
-        }
-        
-        @include phone{
-            width: 85%;
-        }
-
-        h1{
-            color: $blue;
-            text-align: center;
-            font-size: 3rem;
-            margin: 20px 0;
-
-            @include phone{
-                font-size: 2rem;
-            }
-            
-        }
-
-        p{
-            color: $blue;
-            text-align: justify;
-
-            @include phone{
-                font-size: .9rem;
-            }
-        }
-    }
-}
-
-///////////////////////////////////////////////////////////////////////
- 
 .section2{
     background: $white;
 
     .section2-container{
         position: relative;
         padding: 100px 0 100px 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+        display: flex;
         min-height: 400px;
         height: fit-content;
-        width: 80%;
+        width: 90%;
         margin: auto;
         position: relative;
 
         @include phone{
-            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            flex-direction: column;
             width: 90%;
             padding: 100px 0 100px 0;
         }
@@ -266,11 +213,12 @@
         & .image-container{
             position: relative;
             height: 400px;
+            width: 100%;
             background: url('../who.jpg');
             background-size: cover;
             background-position: 40% 80%;
             background-repeat: no-repeat;
-            z-index: 2;
+            z-index: 1;
 
             @include phone{
                 height: 350px;
@@ -278,24 +226,24 @@
             }
         }
 
-        & .shape{
+/*         & .shape{
             position: absolute;
-            height: 600px;
-            width: 100vw;
+            height: 500px;
+            width: 300px;
             background:$light;
-            z-index: 1;
-            top: 000px;
-            left: -10vw;
+            z-index: 0;
+            top: 50px;
+            left: -50px;
 
-            @include tablet{
-                height: 800px;
+            @include mini{
+                height: 850px;
             }
-            }
+            } */
         }
 
         & .text-container{
                 position: relative;
-                width: 80%;
+                width: 100%;
                 margin: auto;
                 color: $blue;
                 z-index: 2;
@@ -308,7 +256,7 @@
                     font-size: 3rem;
                     position: relative;
                     text-align: left;
-                    width: 70%;
+                    width: 85%;
                     margin:  0 auto 20px auto;
     
                     @include laptop{
@@ -319,11 +267,12 @@
 
                     @include mini{
                         width: 85%;
+                        text-align: center;
                     }
                 }
 
                 & p{
-                    width: 70%;
+                    width: 85%;
                     margin: 0 auto;
                     text-align: left;
 

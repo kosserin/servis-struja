@@ -137,6 +137,21 @@ nav{
         }
 
     }
+
+    .contact-tag{
+        display: inline-block !important;
+        border:1px solid $blue !important;
+        padding: .5rem 2rem;
+        border-radius: 30px;
+        transition: all 300ms ease;
+        transform: translateY(2px);
+
+        &:hover{
+            background: $blue;
+            color: $white;
+            transition: all 300ms ease;
+        }
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -264,9 +279,9 @@ nav{
         }
 
         & a:nth-child(1){
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.3rem;
             color: $white;
-            background-color: $blue;
+            background: rgba($blue,1);
             border-radius: 30px;
             margin-right: 10px;
 
