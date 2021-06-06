@@ -79,6 +79,7 @@
 
         @include phone{
             width: 85%;
+            font-size: .85rem;
         }
     }
 
@@ -126,16 +127,32 @@
 
         a{
             text-decoration: none;
-            background: $blue;
-            color: $white;
-            padding: 1.1rem 4rem;
+            background: transparent;
+            color: $blue;
+            padding: .9rem 3rem;
             border-radius: 30px;
             border: 1px solid $blue;
             transition: all 300ms ease;
+            font-size: .9rem;
+
+            @include phone{
+                font-size: .8rem;
+            }
+
+            &:hover i{
+                transition: transform 300ms ease;
+                transform: translate(5px,1px);
+            }
+
+            i{
+                transition: transform 300ms ease;
+                transform: translate(0,1px);
+                margin-left: 10px;
+            }
 
             &:hover{
-                background: transparent;
-                color: $blue;
+                background: $blue;
+                color: $white;
                 transition: all 300ms ease;
             }
         }
@@ -202,13 +219,40 @@
 
     .section2-container{
         width: 90vw;
-        margin: 0 auto 200px auto;
+        margin: 0 auto 0 auto;
+
+        h2{
+            padding-top: 40px;
+            color: $light;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+
+            @include phone{
+                font-size: 1rem;
+            }
+        }
+
+        h1{
+            color: $blue;
+            text-align: center;
+            font-size: 2.5rem;
+            line-height: 45px;
+
+            @include mini{
+                font-size: 2rem;
+            }
+
+            @include phone{
+                font-size: 1.2rem;
+            }
+        }
 
         @include tablet{
             margin-bottom: 0px;
         }
         .fa-quote-left{
-            font-size: 4rem;
+            font-size: 3rem;
             color: $blue;
             transform: translateY(100px);
         }
@@ -276,8 +320,7 @@
             margin-top: 10px;
             display: flex;
             justify-content: space-between;
-            margin-bottom: 100px;
-            padding: 100px 0 200px;
+            padding: 0px 0 200px;
             .quote.active-quote{
 
                 @include mini{
@@ -291,9 +334,10 @@
                 padding: 3rem;
                 border-radius: 10px;
                 color: $blue;
-                width: 30vw;
+                width: 25vw;
                 transform: translateY(10vh);
                 margin: 0 auto;
+                background: rgba($blue,.1);
                 
                 @include laptop{
                     margin: 0 30px;
@@ -306,6 +350,7 @@
                     margin: 0 30vw 0 30vw;
                     width: 40vw;
                     top: 10vh;
+                    transform: translateY(-50px);
                 }
                 @include tablet{
                     width: 60vw;
@@ -316,6 +361,7 @@
                 .quote-text{
                     margin-bottom: 30px;
                     min-height: 250px;
+                    font-size: .9rem;
 
                     @include laptop{
                         font-size: .85rem;
@@ -324,6 +370,7 @@
 
                 h1{
                     font-size: 1rem;
+                    text-align: left;
                 }
 
                 .title{
@@ -353,7 +400,7 @@
 .section3{
     position: relative;
     width: 60vw;
-    margin: 0 25vw 200px 15vw;
+    margin: 50px 25vw 150px 15vw;
     background: rgba($blue,.1);
     padding: 2rem 3.5rem;
     min-height: 500px;
@@ -369,8 +416,9 @@
     }
 
     @include phone{
-        width: 100vw;
-        margin: 0 auto;
+        width: 60vw;
+        margin: 0 35vw 0 5vw;
+        min-height: 300px;
     }
 
     h2{
@@ -387,7 +435,7 @@
 
         @include phone{
             width: 100%;
-            font-size: .9rem;
+            font-size: .8rem;
         }
     }
 
@@ -396,6 +444,7 @@
         width: 50%;
         font-size: 2.5rem;
         margin-bottom: 10px;
+        line-height: 45px;
 
         @include laptop{
             width: 55%;
@@ -409,7 +458,8 @@
 
         @include phone{
             width: 100%;
-            font-size: 1.3rem;
+            font-size: .9rem;
+            line-height: 25px;
         }
     }
 
@@ -426,7 +476,8 @@
         }
 
         @include phone{
-            width: 100%;
+            width: 70%;
+            font-size: .75rem;
         }
     }
 
@@ -435,10 +486,6 @@
         flex-direction: column;
         margin-top: 20px;
 
-        @include fold{
-            padding-bottom: 150px;
-        }
-
         a{
             text-decoration: none;
             margin: 10px 0;
@@ -446,6 +493,11 @@
             font-weight: 600;
             border-bottom: 2px solid $light;
             width: 150px;
+
+            @include phone{
+                font-size: .8rem;
+                width: 120px;
+            }
         }
     }
 
@@ -480,66 +532,204 @@
             top: 150px;
             height: 200px;
             width: 300px; */
-            top: 325px;
-            height: 150px;
-            width: 250px;
-            right: 80px;
+            top: 60px;
+            height: 250px;
+            width: 180px;
+            right: -120px;
         }
 
-        @include fold{
+        /* @include fold{
             right: 30px;
             top: 370px;
-        }
+        } */
     }
 }
 
 
+///////////////////////////////////////////////////////////////////////
+ 
+.section4{
 
-/* #fifth{
-    margin: 200px 0;
-    background-color: $white;
-    text-align: center;
-    & h1{
-        font-size: 3rem;
+    @include phone{
+        margin: 200px 0 50px 0;
+    }
+    
+    .section4-container{
+        text-align: center;
+
+        .title-small{
+        color: $light;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        padding-top: 30px;
+
+        @include phone{
+            font-size: .9rem;
+        }
+        }
+
+        .title-large{
         color: $blue;
-        position: relative;
-        margin-bottom: 30px;
-    }
-} */
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        line-height: 45px;
 
-/* .sponsors{
-    display: flex;
-    width: 100%;
-    margin: 50px auto;
-    justify-content: center;
-    align-items: center;
-    background: $light;
-    @include tablet{
-        width: 80%;
-    }
-    & .sponsor{
-        width: 150px;
-        & img{
-            width: 100%;
-            opacity: .7;
-            &:hover{
-                opacity: 1;
+        @include phone{
+            font-size: 2rem;
+        }
+        }
+
+        .title-text{
+        color: rgba($blue, $alpha:.8);
+        font-size: .9rem;
+        width: 40%;
+        margin: 0 auto;
+
+        @include mini{
+            width: 70%;
+        }
+
+        @include phone{
+            font-size: .8rem;
+        }
+        }
+
+        .cards{
+            display: flex;
+            padding: 100px 0 150px 0;
+            justify-content: center;
+
+            .card{
+
+                h1{
+                    color: $light;
+                    font-size: 2.5rem;
+
+                    @include mini{
+                        font-size: 2.3rem;
+                    }
+
+                    @include phone{
+                        font-size: 2rem;
+                    }
+
+                    @include fold{
+                        font-size: 1.8rem;
+                    }
+                }
+
+                p{
+                    width: 60%;
+                    margin: 0 auto;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    color: $blue;
+
+                    @include mini{
+                        width: 90%;
+                        font-size: .9rem;
+                    }
+                    
+                    @include phone{
+                        font-size: .7rem;
+                    }
+                }
             }
         }
     }
-    & .sponsor:first-child{
-        transform: translateY(35%);
-    }
-    & .sponsor:first-child.appear{
-        transform: translateY(5%);
-    }
-    & .sponsor:nth-child(2){
-        transform: translateY(30%);
-    }
-    & .sponsor:nth-child(2).appear{
-        transform: translateY(0%);
-    }
-} */
+}
 
-///////////////////////////////////////////////////////////////////////
- 
+.section5{
+
+    @include phone{
+        margin-bottom: 200px;
+    }
+    
+    .section5-container{
+        position: relative;
+
+        padding:75px 50px;
+        background: $light;
+
+        @include phone{
+            padding: 75px 20px;
+            background: rgba($color: $light, $alpha: .8);
+        }
+
+        h1{
+            font-size: 2.5rem;
+            color: $white;
+
+            @include mini{
+                font-size: 1.5rem;
+            }
+
+            @include phone{
+                width: 100%;
+            }
+        }
+
+        p{
+            color: $white;
+            width: 40%;
+
+            @include mini{
+                font-size: .8rem;
+            }
+
+            @include phone{
+                width: 100%;
+            }
+        }
+
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: $white;
+            background: transparent;
+            padding: 1rem 2rem;
+            margin-top: 25px;
+            border-radius: 30px;
+            border: 1px solid $white;
+
+            @include mini{
+                font-size: .8rem;
+            }
+
+            &:hover{
+                background: $white;
+                color: $light;
+                transition: transform 300ms ease;
+            }
+
+            &:hover i{
+                transform: translate(5px, 1px);
+            }
+
+            i{
+                margin-left: 5px;
+                transform: translateY(1px);
+                transition: transform 300ms ease;
+            }
+        }
+
+        .section5-image{
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right,rgba($light,1),rgba($light,.9),rgba($light,.7),rgba($light,.5),rgba($light,.3),rgba($light,0),rgba($light,0),rgba($light,0),),url('../who.jpg') no-repeat center;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            @include phone{
+                width: 100%;
+                z-index: -1;
+                background: url('../who.jpg') no-repeat center;
+                background-size: cover;
+            }
+
+        }
+    }
+
+}

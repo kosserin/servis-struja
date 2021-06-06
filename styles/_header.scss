@@ -7,20 +7,22 @@
     height: 100vh;
     background: $white;
     @include mini{
-        background: linear-gradient(to top,rgba($white,.75),rgba($white,.7),rgba($white,.8),rgba($white,.8),rgba($white,.9)), url('../services/21.jpg');
+        background: linear-gradient(to top,rgba($white,.6),rgba($white,.7),rgba($white,.6),rgba($white,.6),rgba($white,.3)), url('../services/10.jpg');
+        /* background: linear-gradient(to top,rgba($white,.75),rgba($white,.4),rgba($white,.7),rgba($white,.6),rgba($white,.3)), url('../pozadina.jpg'); */
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
     .image-background{
-        background:url('../services/21.jpg') no-repeat center;
+        background: linear-gradient(to right,rgba($white,1),rgba($white,.4),rgba($white,.2),rgba($white,.1),rgba($white,0),rgba($white,0),rgba($white,0),rgba($white,0),rgba($white,0),rgba($white,0),rgba($white,0),rgba($white,0)), url('../services/10.jpg');
+        /* background:url('../services/21.jpg') no-repeat center; */
         background-size: cover;
         width: 47%;
         height: 85vh;
         position: absolute;
         top: 10vh;
-        right: 2vw;
+        right: 0vw;
         @include laptop{
             right: 20px;
             width: 45%;
@@ -161,7 +163,7 @@ nav{
     height: 92vh;
     display: flex;
     flex-direction: column;
-    padding-top: 10%;
+    padding-top: 5%;
     margin: auto;
 
     @include laptop{
@@ -235,7 +237,7 @@ nav{
         }
 
         @include phone{
-            width: 80%;
+            width: 70%;
             font-size: .9rem;
             margin: 0 auto 0 ;
         }
@@ -261,65 +263,39 @@ nav{
             align-items: center;
         }
 
-        & a{
+        a{
             text-decoration: none;
-            transition: all .3s ease;
-            margin: 10px 0;
-            font-size: .85rem;
-            font-weight: 500;
-            border: 1px solid $blue;
-
-            @include phone{
-                font-size: .8rem;
-                width: 200px;
-            }
-
-            @include fold{
-                font-size: .8rem;
-            }
-        }
-
-        & a:nth-child(1){
-            padding: 1.2rem 2.3rem;
-            color: $white;
-            background: rgba($blue,1);
-            border-radius: 30px;
-            margin-right: 10px;
-
-            @include phone{
-                padding: 1.1rem 2rem;
-            }   
-
-            @include fold{
-                padding: 1rem 1rem;
-                margin-right: 5px;
-            }
-
-            &:hover{
-                color: $blue;
-                background-color: $white;
-            }
-        }
-
-        & a:nth-child(2){
-            padding: 1rem 2.5rem;
             color: $blue;
-            background-color: transparent;
+            background: transparent;
             border-radius: 30px;
-            border: 1px solid $blue;
-            transition: all .3s ease;
+            padding: 1rem 2rem;
+            margin: 20px 0 0 0;
+            transition: all 300ms ease;
+            font-weight: 400;
+            font-size: .8rem;
+            border: 1.6px solid $blue;
+            text-align: center;
 
-            @include phone{
-                padding: 1rem 3rem;
+            &:hover i{
+                transition: transform 300ms ease;
+                transform: translate(5px,1px);
             }
 
-            @include fold{
-                padding: 1rem 1.2rem;
+            i{
+                transition: transform 300ms ease;
+                transform: translate(0,1px);
+                margin-left: 10px;
+            }
+
+            @include phone{
+                padding: .9rem 2rem .9rem 2rem;
+                font-size: .8rem;
             }
 
             &:hover{
+                background: $blue;
                 color: $white;
-                background-color: $blue;
+                transition: all 300ms ease;
             }
         }
     }
@@ -338,11 +314,13 @@ nav{
     left: 0%;
 
     @include mini{
-    background: $white;
+    background: rgba($white,.6);
     }
 
+    @include phone{
+        bottom: 5vh;
+    }
     @include fold{
-        bottom: 1%;
         right: 15%;
     }
 
