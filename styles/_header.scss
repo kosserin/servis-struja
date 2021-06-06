@@ -126,7 +126,7 @@ nav{
         & a{
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: $blue;
             position: relative;
             text-align: center;
@@ -267,6 +267,7 @@ nav{
             margin: 10px 0;
             font-size: .85rem;
             font-weight: 500;
+            border: 1px solid $blue;
 
             @include phone{
                 font-size: .8rem;

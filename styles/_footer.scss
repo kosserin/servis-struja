@@ -3,49 +3,78 @@
 
 /*  */
 .copyright{
-    color: rgb(223, 223, 223);
-    background-color: $blue;
-    text-align: center;
-    padding: 5px 0;
-    font-size: .9rem;
-    font-weight: 300;
+    position: absolute;
+    bottom: 50px;
+    right: 0px;
+    color: $white;
+
+    @include phone{
+        font-size: .8rem;
+        right: 30px;
+    }
 }
+
 footer{
-    padding-top: 30px;
-    background: $light;
+    background: $blue;
 
     .footer-container{
-        width: 85vw;
+        padding: 50px 0 100px 0;
+        position: relative;
+        width: 90vw;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        padding-bottom: 20px;
+        @include phone{
+            width: 95vw;
+        }
 
         .left-side{
-
-            padding-top: 50px;
-
-            img{
-                width: 120px;
-            }
+            padding: 30px 0 0 0;
 
             h1{
-                color: $blue;
+                color: $white;
                 font-weight: 500;
                 font-size: 1rem;
                 transform: translateY(-30px);
+                
+                @include tablet{
+                    font-size: .9rem;
+                }
+                @include phone{
+                    font-size: .75rem;
+                }
             }
 
             p{
-                color: $blue;
+                color: $white;
                 transform: translateY(-30px);
+                font-size: .9rem;
+
+                i{
+                    margin-right: 5px;
+                }
+
+                @include tablet{
+                    font-size: .8rem;
+                }
+                @include phone{
+                    font-size: .7rem;
+                }
             }
+
+            .gray-text{
+                color: rgb(204, 204, 204);
+            }
+
         }
 
         .right-side{
             display: flex;
-            min-width: 50vw;
             justify-content: flex-end;
+
+            /* @include tablet{
+                flex-direction: column;
+            } */
 
             ul{
                 display: flex;
@@ -53,8 +82,20 @@ footer{
                 list-style: none;
                 margin: 0 50px;
 
+                @include tablet{
+                    margin: 0 10px;
+                }
+
                 h2{
-                    color: $blue;
+                    color: $white;
+                    font-weight: 500;
+                    @include tablet{
+                        font-size: 1rem;
+                    }
+
+                    @include phone{
+                        font-size: .9rem;
+                    }
                 }
 
                 li{
@@ -64,6 +105,10 @@ footer{
                         font-size: .8rem;
                         color: rgb(204, 204, 204);
 
+                        @include phone{
+                            font-size: .7rem;
+                        }
+
                         &:hover{
                             color: $white;
                         }
@@ -72,5 +117,30 @@ footer{
             }
         }
 
+        .map-footer{
+            border: 2px solid white;
+            width: 30vw;
+
+            @include miniLaptop{
+                display: none;
+            }
+
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .social-footer{
+            position: absolute;
+            bottom: 50px;
+            font-size: 1.5rem;
+            left: 0px;
+            
+            a{
+                color: $white;
+                margin: 0 5px;
+            }
+        }
     }
 }
