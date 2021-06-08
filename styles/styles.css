@@ -7,8 +7,8 @@
 
 @media screen and (max-width: 970px) {
   .background {
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 252, 252, 0.6)), color-stop(rgba(252, 252, 252, 0.7)), color-stop(rgba(252, 252, 252, 0.6)), color-stop(rgba(252, 252, 252, 0.6)), to(rgba(252, 252, 252, 0.3))), url("../services/10.jpg");
-    background: linear-gradient(to top, rgba(252, 252, 252, 0.6), rgba(252, 252, 252, 0.7), rgba(252, 252, 252, 0.6), rgba(252, 252, 252, 0.6), rgba(252, 252, 252, 0.3)), url("../services/10.jpg");
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 252, 252, 0)), color-stop(rgba(252, 252, 252, 0.4)), color-stop(rgba(252, 252, 252, 0.6)), color-stop(rgba(252, 252, 252, 0.8)), color-stop(rgba(252, 252, 252, 0.8)), to(rgba(252, 252, 252, 0.8))), url("../services/10.jpg");
+    background: linear-gradient(to top, rgba(252, 252, 252, 0), rgba(252, 252, 252, 0.4), rgba(252, 252, 252, 0.6), rgba(252, 252, 252, 0.8), rgba(252, 252, 252, 0.8), rgba(252, 252, 252, 0.8)), url("../services/10.jpg");
     /* background: linear-gradient(to top,rgba($white,.75),rgba($white,.4),rgba($white,.7),rgba($white,.6),rgba($white,.3)), url('../pozadina.jpg'); */
     background-size: cover;
     background-position: center;
@@ -71,24 +71,24 @@ nav {
 
 @media screen and (max-width: 768px) {
   nav {
-    /* justify-content: space-around; */
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
-nav .nav-logo img {
-  width: 100px;
-  -webkit-transform: translate(0, 30px);
-          transform: translate(0, 30px);
+nav .nav-logo {
+  margin: 0 10px;
 }
 
-@media screen and (max-width: 768px) {
+nav .nav-logo img {
+  width: 70px;
+  -webkit-transform: translate(0, 40px);
+          transform: translate(0, 40px);
+}
+
+@media screen and (max-width: 970px) {
   nav .nav-logo img {
     width: 50px;
-    -webkit-transform: translate(0, 0px);
-            transform: translate(0, 0px);
   }
 }
 
@@ -96,19 +96,11 @@ nav .first-logo {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 970px) {
   nav .first-logo img {
-    width: 100px;
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  nav .first-logo img {
-    width: 100px;
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
+    width: 90px;
+    -webkit-transform: translateY(9px);
+            transform: translateY(9px);
   }
 }
 
@@ -320,7 +312,7 @@ nav .first-logo {
 
 @media screen and (max-width: 600px) {
   .header-container p {
-    width: 70%;
+    width: 80%;
     font-size: .9rem;
     margin: 0 auto 0;
   }
@@ -527,13 +519,13 @@ nav .first-logo {
           transform: rotate(-45deg) translate(5px, -6px);
 }
 
-.nav-logo {
-  display: none !important;
-}
-
 .section1 {
   width: 100vw;
   margin: 300px 0 200px 0;
+  /*     .section1-container{
+        padding: 2rem;
+        transform: translateY(50px);
+    } */
 }
 
 .section1 .services {
@@ -576,8 +568,8 @@ nav .first-logo {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-transform: translateY(-40px);
-          transform: translateY(-40px);
+  position: relative;
+  top: -40px;
 }
 
 .section1 .services .service:nth-child(3) {
@@ -585,8 +577,8 @@ nav .first-logo {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-transform: translateY(-80px);
-          transform: translateY(-80px);
+  position: relative;
+  top: -100px;
 }
 
 .section1 .services .service:nth-child(4) {
@@ -594,8 +586,8 @@ nav .first-logo {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-transform: translateY(-40px);
-          transform: translateY(-40px);
+  position: relative;
+  top: -40px;
 }
 
 .section1 .services .service:nth-child(5) {
@@ -607,10 +599,16 @@ nav .first-logo {
 
 .section1 h1 {
   text-align: center;
-  font-size: 2.3rem;
-  color: #244750;
+  font-size: 3rem;
+  color: #060448;
   margin-top: 50px;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 970px) {
+  .section1 h1 {
+    font-size: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -621,10 +619,17 @@ nav .first-logo {
 
 .section1 p {
   text-align: center;
-  color: rgba(6, 4, 72, 0.8);
+  color: #060448;
   width: 50%;
   margin: 0 auto;
   margin-top: 30px;
+}
+
+@media screen and (max-width: 970px) {
+  .section1 p {
+    width: 65%;
+    font-size: .9rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -646,41 +651,63 @@ nav .first-logo {
 }
 
 .section1 .icons .icon {
-  margin: 0 50px;
+  margin: 0 25px;
 }
 
 @media screen and (max-width: 768px) {
   .section1 .icons .icon {
-    margin: 0 25px;
+    margin: 0 8px;
+  }
+}
+
+.section1 .icons .icon .img-div {
+  border-radius: 50%;
+  background: rgba(6, 4, 72, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 1rem 0rem;
+  width: 80px;
+  /*                 cursor: pointer;
+                transition: all 300ms ease;
+                &:hover{
+                    background: rgba($blue, $alpha:.8);
+                    transition: all 300ms ease;
+                } */
+}
+
+@media screen and (max-width: 768px) {
+  .section1 .icons .icon .img-div {
+    width: 60px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .section1 .icons .icon {
-    margin: 0 10px;
+  .section1 .icons .icon .img-div {
+    width: 50px;
   }
 }
 
-.section1 .icons .icon i {
-  font-size: 3rem;
-  color: #060448;
+.section1 .icons .icon .img-div img {
+  width: 40px;
 }
 
-@media screen and (max-width: 600px) {
-  .section1 .icons .icon i {
-    font-size: 2rem;
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
+@media screen and (max-width: 768px) {
+  .section1 .icons .icon .img-div img {
+    width: 30px;
   }
 }
 
-.section1 .icons .icon img {
-  width: 50px;
-}
-
 @media screen and (max-width: 600px) {
-  .section1 .icons .icon img {
-    width: 36px;
+  .section1 .icons .icon .img-div img {
+    width: 24px;
   }
 }
 
@@ -738,18 +765,11 @@ nav .first-logo {
   transition: all 300ms ease;
 }
 
-.section1 .section1-container {
-  background: rgba(6, 4, 72, 0.1);
-  padding: 2rem;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
-}
-
 /* important */
 .fade-in {
   opacity: 0;
-  -webkit-transition: opacity  250ms ease-in;
-  transition: opacity  250ms ease-in;
+  -webkit-transition: opacity  500ms ease-in;
+  transition: opacity  500ms ease-in;
 }
 
 /* important */
@@ -803,20 +823,6 @@ nav .first-logo {
           transform: translateX(0);
 }
 
-.scale {
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
-  -webkit-transition: -webkit-transform 300ms ease-in;
-  transition: -webkit-transform 300ms ease-in;
-  transition: transform 300ms ease-in;
-  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
-}
-
-.scale.appear {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
-}
-
 .section2 {
   background: #fcfcfc;
 }
@@ -843,17 +849,30 @@ nav .first-logo {
 .section2 .section2-container h1 {
   color: #060448;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   line-height: 45px;
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 970px) {
+  .section2 .section2-container h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .section2 .section2-container h1 {
     font-size: 2rem;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .section2 .section2-container h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
   .section2 .section2-container h1 {
     font-size: 1.2rem;
   }
@@ -874,7 +893,7 @@ nav .first-logo {
 
 .section2 .section2-container .quotes-container {
   position: relative;
-  background: rgba(6, 4, 72, 0.1);
+  background: #fcfcfc;
   width: 100vw;
   -webkit-transform: translateX(-5vw);
           transform: translateX(-5vw);
@@ -884,7 +903,7 @@ nav .first-logo {
 
 @media screen and (max-width: 600px) {
   .section2 .section2-container .quotes-container {
-    padding-bottom: 300px;
+    padding-bottom: 350px;
   }
 }
 
@@ -1108,7 +1127,7 @@ nav .first-logo {
 .section3 h1 {
   color: #060448;
   width: 50%;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 10px;
   line-height: 45px;
 }
@@ -1116,7 +1135,7 @@ nav .first-logo {
 @media screen and (max-width: 1280px) {
   .section3 h1 {
     width: 55%;
-    font-size: 1.8rem;
+    font-size: 2.3rem;
   }
 }
 
@@ -1129,8 +1148,8 @@ nav .first-logo {
 
 @media screen and (max-width: 600px) {
   .section3 h1 {
-    width: 100%;
-    font-size: .9rem;
+    width: 80%;
+    font-size: 1.5rem;
     line-height: 25px;
   }
 }
@@ -1262,14 +1281,15 @@ nav .first-logo {
 
 .section4 .section4-container .title-large {
   color: #060448;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 3.5rem;
+  margin: 10px 0;
   line-height: 45px;
 }
 
 @media screen and (max-width: 600px) {
   .section4 .section4-container .title-large {
     font-size: 2rem;
+    margin-top: 0;
   }
 }
 
@@ -1302,6 +1322,22 @@ nav .first-logo {
           justify-content: center;
 }
 
+@media screen and (max-width: 600px) {
+  .section4 .section4-container .cards {
+    padding: 50px 0 150px 0;
+  }
+}
+
+.section4 .section4-container .cards .card {
+  width: 25%;
+}
+
+@media screen and (max-width: 600px) {
+  .section4 .section4-container .cards .card {
+    width: 30%;
+  }
+}
+
 .section4 .section4-container .cards .card h1 {
   color: #244750;
   font-size: 2.5rem;
@@ -1315,13 +1351,7 @@ nav .first-logo {
 
 @media screen and (max-width: 600px) {
   .section4 .section4-container .cards .card h1 {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .section4 .section4-container .cards .card h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -1346,22 +1376,26 @@ nav .first-logo {
   }
 }
 
+.section5 {
+  margin-bottom: 150px;
+}
+
 @media screen and (max-width: 600px) {
   .section5 {
-    margin-bottom: 200px;
+    margin-bottom: 150px;
   }
 }
 
 .section5 .section5-container {
   position: relative;
-  padding: 75px 50px;
-  background: #244750;
+  padding: 175px 50px;
+  background: #060448;
 }
 
 @media screen and (max-width: 600px) {
   .section5 .section5-container {
     padding: 75px 20px;
-    background: rgba(36, 71, 80, 0.8);
+    background: rgba(6, 4, 72, 0.8);
   }
 }
 
@@ -1418,7 +1452,7 @@ nav .first-logo {
 
 .section5 .section5-container a:hover {
   background: #fcfcfc;
-  color: #244750;
+  color: #060448;
   -webkit-transition: -webkit-transform 300ms ease;
   transition: -webkit-transform 300ms ease;
   transition: transform 300ms ease;
@@ -1443,8 +1477,8 @@ nav .first-logo {
 .section5 .section5-container .section5-image {
   width: 50%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#244750), color-stop(rgba(36, 71, 80, 0.9)), color-stop(rgba(36, 71, 80, 0.7)), color-stop(rgba(36, 71, 80, 0.5)), color-stop(rgba(36, 71, 80, 0.3)), color-stop(rgba(36, 71, 80, 0)), color-stop(rgba(36, 71, 80, 0)), to(rgba(36, 71, 80, 0))), url("../who.jpg") no-repeat center;
-  background: linear-gradient(to right, #244750, rgba(36, 71, 80, 0.9), rgba(36, 71, 80, 0.7), rgba(36, 71, 80, 0.5), rgba(36, 71, 80, 0.3), rgba(36, 71, 80, 0), rgba(36, 71, 80, 0), rgba(36, 71, 80, 0)), url("../who.jpg") no-repeat center;
+  background: -webkit-gradient(linear, left top, right top, from(#060448), color-stop(rgba(6, 4, 72, 0.9)), color-stop(rgba(6, 4, 72, 0.7)), color-stop(rgba(6, 4, 72, 0.5)), color-stop(rgba(6, 4, 72, 0.3)), color-stop(rgba(6, 4, 72, 0)), color-stop(rgba(6, 4, 72, 0)), to(rgba(6, 4, 72, 0))), url("../who.jpg") no-repeat center;
+  background: linear-gradient(to right, #060448, rgba(6, 4, 72, 0.9), rgba(6, 4, 72, 0.7), rgba(6, 4, 72, 0.5), rgba(6, 4, 72, 0.3), rgba(6, 4, 72, 0), rgba(6, 4, 72, 0), rgba(6, 4, 72, 0)), url("../who.jpg") no-repeat center;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -1476,7 +1510,7 @@ nav .first-logo {
 }
 
 footer {
-  background: #244750;
+  background: #060448;
 }
 
 footer .footer-container {
@@ -1500,6 +1534,10 @@ footer .footer-container {
 
 footer .footer-container .left-side {
   padding: 30px 0 0 0;
+  /*             img{
+                width: 100px;
+                transform: translateY(-50px);
+            } */
 }
 
 footer .footer-container .left-side h1 {

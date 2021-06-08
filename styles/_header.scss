@@ -7,7 +7,7 @@
     height: 100vh;
     background: $white;
     @include mini{
-        background: linear-gradient(to top,rgba($white,.6),rgba($white,.7),rgba($white,.6),rgba($white,.6),rgba($white,.3)), url('../services/10.jpg');
+        background: linear-gradient(to top, rgba($white,0), rgba($white,.4),rgba($white,.6),rgba($white,.8),rgba($white,.8),rgba($white,.8),), url('../services/10.jpg');
         /* background: linear-gradient(to top,rgba($white,.75),rgba($white,.4),rgba($white,.7),rgba($white,.6),rgba($white,.3)), url('../pozadina.jpg'); */
         background-size: cover;
         background-position: center;
@@ -54,16 +54,19 @@ nav{
 
 
     @include tablet{
-        /* justify-content: space-around; */
-        justify-content: flex-end;
+        justify-content: space-around;
+    }
+
+    .nav-logo{
+        margin: 0 10px;
     }
 
     .nav-logo img{
-        width: 100px;
-        transform: translate(0,30px);
-        @include tablet{
+        width: 70px;
+        transform: translate(0,40px);
+        @include mini{
             width: 50px;
-            transform: translate(0,00px);
+
         }
     }
 
@@ -72,14 +75,9 @@ nav{
 
         & img{
 
-            @include tablet{
-                width: 100px;
-                transform: translateY(5px);
-            }
-
-            @include phone{
-                width: 100px;
-                transform: translateY(5px);
+            @include mini{
+                width: 90px;
+                transform: translateY(9px);
             }
         }
 
@@ -237,7 +235,7 @@ nav{
         }
 
         @include phone{
-            width: 70%;
+            width: 80%;
             font-size: .9rem;
             margin: 0 auto 0 ;
         }

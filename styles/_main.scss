@@ -1,9 +1,6 @@
 @import 'colors';
 @import 'media-queries';
 
-.nav-logo{
-    display: none !important;
-}
 .section1{
     width: 100vw;
     margin: 300px 0 200px 0;
@@ -34,21 +31,24 @@
                         background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            transform: translateY(-40px);
+            position: relative;
+            top: -40px;
         }
         .service:nth-child(3){
             background: url('../section1/23.jpg');
                         background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            transform: translateY(-80px);
+            position: relative;
+            top: -100px;
         }
         .service:nth-child(4){
             background: url('../section1/28.jpg');
                         background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            transform: translateY(-40px);
+            position: relative;
+            top: -40px;
         }
         .service:nth-child(5){
             background: url('../section1/6.jpg');
@@ -60,10 +60,14 @@
 
     h1{
         text-align: center;
-        font-size: 2.3rem;
-        color: $light;
+        font-size: 3rem;
+        color: $blue;
         margin-top: 50px;
-        font-weight: 600;
+        font-weight: 700;
+
+        @include mini{
+            font-size: 2.5rem;
+        }
 
         @include phone{
             font-size: 1.5rem;
@@ -72,10 +76,15 @@
 
     p{
         text-align: center;
-        color: rgba($blue, $alpha:.8);
+        color: $blue;
         width: 50%;
         margin: 0 auto;
         margin-top: 30px;
+
+        @include mini{
+            width: 65%;
+            font-size: .9rem;
+        }
 
         @include phone{
             width: 85%;
@@ -90,31 +99,48 @@
         justify-content: center;
 
         .icon{
-            margin: 0 50px;
+            margin: 0 25px;
 
             @include tablet{
-                margin: 0 25px;
+                margin: 0 8px;
             }
 
-            @include phone{
-                margin: 0 10px;
-            }
+            .img-div{   
+                border-radius: 50%;
+                background: rgba($blue,.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 1rem 0rem;
+                width: 80px;
+/*                 cursor: pointer;
+                transition: all 300ms ease;
+                &:hover{
+                    background: rgba($blue, $alpha:.8);
+                    transition: all 300ms ease;
+                } */
 
-            i{
-                font-size: 3rem;
-                color: $blue;
-
-                @include phone{
-                    font-size: 2rem;
-                    transform: translateY(5px);
+                @include tablet{
+                    width: 60px;
                 }
-            }
-
-            img{
-                width: 50px;
 
                 @include phone{
-                    width: 36px;
+                    width: 50px;
+                }
+
+                
+                img{
+                    width: 40px;
+    
+                    @include tablet{
+                        width: 30px;
+                    }
+
+                    @include phone{
+                        width: 24px;
+                    }
+
                 }
             }
         }
@@ -158,11 +184,10 @@
         }
     }
 
-    .section1-container{
-        background: rgba($blue,.1);
+/*     .section1-container{
         padding: 2rem;
         transform: translateY(50px);
-    }
+    } */
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -170,7 +195,7 @@
 /* important */
 .fade-in{
     opacity: 0;
-    transition:  opacity  250ms ease-in;
+    transition:  opacity  500ms ease-in;
 }
 /* important */
 .fade-in.appear{
@@ -204,13 +229,6 @@
 .from-left.appear,.from-right.appear{
     transform: translateX(0);
 }
-.scale{
-    transform: scale(0,1);
-    transition: transform 300ms ease-in;
-}
-.scale.appear{
-    transform: scale(1,1);
-}
 
 ///////////////////////////////////////////////////////////////////////
  
@@ -236,14 +254,23 @@
         h1{
             color: $blue;
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             line-height: 45px;
+            margin-top: 10px;
 
             @include mini{
+                font-size: 2.5rem;
+            }
+
+            @include tablet{
                 font-size: 2rem;
             }
 
             @include phone{
+                font-size: 1.6rem;
+            }
+
+            @include fold{
                 font-size: 1.2rem;
             }
         }
@@ -259,14 +286,14 @@
 
         .quotes-container{
             position: relative;
-            background: rgba($blue,.1);
+            background: $white;
             width: 100vw;
             transform: translateX(-5vw);
             min-height: 600px;
             padding: 0px 0;
 
             @include phone{
-                padding-bottom: 300px;
+                padding-bottom: 350px;
             }
 
             .fa-arrow-left,.fa-arrow-right{
@@ -442,13 +469,13 @@
     h1{
         color: $blue;
         width: 50%;
-        font-size: 2.5rem;
+        font-size: 3rem;
         margin-bottom: 10px;
         line-height: 45px;
 
         @include laptop{
             width: 55%;
-            font-size: 1.8rem;
+            font-size: 2.3rem;
         }
 
         @include tablet{
@@ -457,8 +484,8 @@
         }
 
         @include phone{
-            width: 100%;
-            font-size: .9rem;
+            width: 80%;
+            font-size: 1.5rem;
             line-height: 25px;
         }
     }
@@ -570,12 +597,13 @@
 
         .title-large{
         color: $blue;
-        font-size: 2.5rem;
-        margin-bottom: 10px;
+        font-size: 3.5rem;
+        margin: 10px 0;
         line-height: 45px;
 
         @include phone{
             font-size: 2rem;
+            margin-top: 0;
         }
         }
 
@@ -599,7 +627,16 @@
             padding: 100px 0 150px 0;
             justify-content: center;
 
+            @include phone{
+                padding: 50px 0 150px 0;
+            }
+
             .card{
+                width: 25%;
+
+                @include phone{
+                    width: 30%;
+                }
 
                 h1{
                     color: $light;
@@ -610,12 +647,9 @@
                     }
 
                     @include phone{
-                        font-size: 2rem;
+                        font-size: 1.5rem;
                     }
 
-                    @include fold{
-                        font-size: 1.8rem;
-                    }
                 }
 
                 p{
@@ -640,20 +674,20 @@
 }
 
 .section5{
-
+    margin-bottom: 150px;
     @include phone{
-        margin-bottom: 200px;
+        margin-bottom: 150px;
     }
     
     .section5-container{
         position: relative;
 
-        padding:75px 50px;
-        background: $light;
+        padding:175px 50px;
+        background: $blue;
 
         @include phone{
             padding: 75px 20px;
-            background: rgba($color: $light, $alpha: .8);
+            background: rgba($color: $blue, $alpha: .8);
         }
 
         h1{
@@ -698,7 +732,7 @@
 
             &:hover{
                 background: $white;
-                color: $light;
+                color: $blue;
                 transition: transform 300ms ease;
             }
 
@@ -716,7 +750,7 @@
         .section5-image{
             width: 50%;
             height: 100%;
-            background: linear-gradient(to right,rgba($light,1),rgba($light,.9),rgba($light,.7),rgba($light,.5),rgba($light,.3),rgba($light,0),rgba($light,0),rgba($light,0),),url('../who.jpg') no-repeat center;
+            background: linear-gradient(to right,rgba($blue,1),rgba($blue,.9),rgba($blue,.7),rgba($blue,.5),rgba($blue,.3),rgba($blue,0),rgba($blue,0),rgba($blue,0),),url('../who.jpg') no-repeat center;
             background-size: cover;
             position: absolute;
             top: 0;

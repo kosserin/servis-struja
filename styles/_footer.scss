@@ -15,7 +15,7 @@
 }
 
 footer{
-    background: $light;
+    background: $blue;
 
     .footer-container{
         padding: 50px 0 100px 0;
@@ -44,6 +44,11 @@ footer{
                     font-size: .75rem;
                 }
             }
+
+/*             img{
+                width: 100px;
+                transform: translateY(-50px);
+            } */
 
             p{
                 color: $white;
