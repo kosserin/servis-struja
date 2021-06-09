@@ -62,8 +62,8 @@ nav{
     }
 
     .nav-logo img{
-        width: 70px;
-        transform: translate(0,40px);
+        width: 85px;
+        transform: translate(0,30px);
         @include mini{
             width: 50px;
 
@@ -76,8 +76,8 @@ nav{
         & img{
 
             @include mini{
-                width: 90px;
-                transform: translateY(9px);
+                width: 105px;
+                transform: translateY(6px);
             }
         }
 
