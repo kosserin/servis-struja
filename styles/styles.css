@@ -419,7 +419,11 @@ nav .first-logo {
 
 @media screen and (max-width: 970px) {
   .experience-container {
-    background: rgba(252, 252, 252, 0.6);
+    background: rgba(252, 252, 252, 0.8);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-right: 2rem;
   }
 }
 
@@ -432,6 +436,7 @@ nav .first-logo {
 @media screen and (max-width: 320px) {
   .experience-container {
     right: 15%;
+    bottom: 8vh;
   }
 }
 
@@ -452,6 +457,10 @@ nav .first-logo {
   .experience-container h1 {
     -webkit-transform: translateY(3px);
             transform: translateY(3px);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 2rem;
   }
 }
 
@@ -469,6 +478,13 @@ nav .first-logo {
   font-weight: bold;
 }
 
+@media screen and (max-width: 1280px) {
+  .experience-container p {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 @media screen and (max-width: 970px) {
   .experience-container p {
     -webkit-transform: translateY(-5px);
@@ -478,8 +494,8 @@ nav .first-logo {
 
 @media screen and (max-width: 600px) {
   .experience-container p {
-    -webkit-transform: translateY(-2px);
-            transform: translateY(-2px);
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
   }
 }
 

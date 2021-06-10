@@ -312,7 +312,9 @@ nav{
     left: 0%;
 
     @include mini{
-    background: rgba($white,.6);
+    background: rgba($white,.8);
+    width: fit-content;
+    padding-right: 2rem;
     }
 
     @include phone{
@@ -320,6 +322,7 @@ nav{
     }
     @include fold{
         right: 15%;
+        bottom: 8vh;
     }
 
     & h1{
@@ -333,6 +336,8 @@ nav{
 
         @include phone{
             transform: translateY(3px);
+            width: fit-content;
+            font-size: 2rem;
         }
     }
 
@@ -346,12 +351,16 @@ nav{
         text-transform: uppercase;
         font-weight: bold;
 
+        @include laptop{
+            transform: translateY(0px);
+        }
+
         @include mini{
             transform: translateY(-5px);
         }
         
         @include phone{
-            transform: translateY(-2px);
+            transform: translateY(2px);
         }
     }
 }
