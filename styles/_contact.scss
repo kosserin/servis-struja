@@ -75,8 +75,12 @@
             font-weight: 600;
 
             @include tablet{
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 margin-left: 60px;
+            }
+
+            @include phone{
+                font-size: 1rem;
             }
 
             &::before{
@@ -90,8 +94,12 @@
                 border-radius: 10px;
 
                 @include tablet{
-                    width: 30px;
+                    width: 25px;
                     height: 3px;
+                }
+
+                @include phone{
+                    left: -13%;
                 }
             }
         }
@@ -116,11 +124,31 @@
             flex-direction: column;
             width: 500px;
 
+            @include phone{
+                width: 350px;
+                padding: 1rem;
+            }
+
+            @include fold{
+                width: 300px;
+            }
+
             .form-bigger-group{
                 display: flex;
 
                 .form-group{
                     margin: 0 20px 0 0;
+
+                    input{
+                        
+                        @include phone{
+                            width: 150px;
+                        }
+
+                        @include fold{
+                            width: 120px;
+                        }
+                    }
                 }
             }
 
@@ -131,6 +159,10 @@
 
                 label{
                     margin-bottom: 5px;
+
+                    @include phone{
+                        font-size: .9rem;
+                    }
                 }
 
                 input{

@@ -9,8 +9,9 @@
     color: $white;
 
     @include phone{
-        font-size: .8rem;
+        font-size: .9rem;
         right: 30px;
+        bottom: 10px;
     }
 }
 
@@ -26,13 +27,16 @@ footer{
         justify-content: space-between;
         @include phone{
             width: 95vw;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         .left-side{
             padding: 30px 0 0 0;
 
             @include phone{
-                padding-left: 5px;
+                padding-left: 30px;
+                margin-right: 30px;
             }
 
             h1{
@@ -40,13 +44,6 @@ footer{
                 font-weight: 500;
                 font-size: 1rem;
                 transform: translateY(-30px);
-                
-                @include tablet{
-                    font-size: .9rem;
-                }
-                @include phone{
-                    font-size: .75rem;
-                }
             }
 
 /*             img{
@@ -57,7 +54,6 @@ footer{
             p{
                 color: $white;
                 transform: translateY(-30px);
-                font-size: .9rem;
 
                 i{
                     margin-right: 5px;
@@ -81,6 +77,11 @@ footer{
             display: flex;
             justify-content: flex-end;
 
+            @include phone{
+                flex-direction: column;
+                padding-left: 22px;
+            }
+
             /* @include tablet{
                 flex-direction: column;
             } */
@@ -95,15 +96,15 @@ footer{
                     margin: 0 10px;
                 }
 
+                @include phone{
+                    margin-bottom: 30px;
+                }
+
                 h2{
                     color: $white;
                     font-weight: 500;
                     @include tablet{
                         font-size: 1rem;
-                    }
-
-                    @include phone{
-                        font-size: .9rem;
                     }
                 }
 
@@ -113,10 +114,6 @@ footer{
                         text-decoration: none;
                         font-size: .8rem;
                         color: rgb(204, 204, 204);
-
-                        @include phone{
-                            font-size: .7rem;
-                        }
 
                         &:hover{
                             color: $white;
@@ -143,8 +140,12 @@ footer{
         .social-footer{
             position: absolute;
             bottom: 50px;
-            font-size: 1.5rem;
+            font-size: 2rem;
             left: 0px;
+
+            @include phone{
+                padding-left: 28px;
+            }
             
             a{
                 color: $white;

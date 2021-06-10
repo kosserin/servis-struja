@@ -425,7 +425,7 @@ nav .first-logo {
 
 @media screen and (max-width: 600px) {
   .experience-container {
-    bottom: 5vh;
+    bottom: 15vh;
   }
 }
 
@@ -1504,8 +1504,9 @@ nav .first-logo {
 
 @media screen and (max-width: 600px) {
   .copyright {
-    font-size: .8rem;
+    font-size: .9rem;
     right: 30px;
+    bottom: 10px;
   }
 }
 
@@ -1529,6 +1530,13 @@ footer .footer-container {
 @media screen and (max-width: 600px) {
   footer .footer-container {
     width: 95vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -1542,7 +1550,8 @@ footer .footer-container .left-side {
 
 @media screen and (max-width: 600px) {
   footer .footer-container .left-side {
-    padding-left: 5px;
+    padding-left: 30px;
+    margin-right: 30px;
   }
 }
 
@@ -1554,23 +1563,10 @@ footer .footer-container .left-side h1 {
           transform: translateY(-30px);
 }
 
-@media screen and (max-width: 768px) {
-  footer .footer-container .left-side h1 {
-    font-size: .9rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  footer .footer-container .left-side h1 {
-    font-size: .75rem;
-  }
-}
-
 footer .footer-container .left-side p {
   color: #fcfcfc;
   -webkit-transform: translateY(-30px);
           transform: translateY(-30px);
-  font-size: .9rem;
 }
 
 footer .footer-container .left-side p i {
@@ -1605,6 +1601,16 @@ footer .footer-container .right-side {
             } */
 }
 
+@media screen and (max-width: 600px) {
+  footer .footer-container .right-side {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 22px;
+  }
+}
+
 footer .footer-container .right-side ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1623,6 +1629,12 @@ footer .footer-container .right-side ul {
   }
 }
 
+@media screen and (max-width: 600px) {
+  footer .footer-container .right-side ul {
+    margin-bottom: 30px;
+  }
+}
+
 footer .footer-container .right-side ul h2 {
   color: #fcfcfc;
   font-weight: 500;
@@ -1634,22 +1646,10 @@ footer .footer-container .right-side ul h2 {
   }
 }
 
-@media screen and (max-width: 600px) {
-  footer .footer-container .right-side ul h2 {
-    font-size: .9rem;
-  }
-}
-
 footer .footer-container .right-side ul li a {
   text-decoration: none;
   font-size: .8rem;
   color: #cccccc;
-}
-
-@media screen and (max-width: 600px) {
-  footer .footer-container .right-side ul li a {
-    font-size: .7rem;
-  }
 }
 
 footer .footer-container .right-side ul li a:hover {
@@ -1675,8 +1675,14 @@ footer .footer-container .map-footer iframe {
 footer .footer-container .social-footer {
   position: absolute;
   bottom: 50px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   left: 0px;
+}
+
+@media screen and (max-width: 600px) {
+  footer .footer-container .social-footer {
+    padding-left: 28px;
+  }
 }
 
 footer .footer-container .social-footer a {
@@ -1884,8 +1890,14 @@ footer .footer-container .social-footer a {
 
 @media screen and (max-width: 768px) {
   #contact .form-container h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-left: 60px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact .form-container h1 {
+    font-size: 1rem;
   }
 }
 
@@ -1902,8 +1914,14 @@ footer .footer-container .social-footer a {
 
 @media screen and (max-width: 768px) {
   #contact .form-container h1::before {
-    width: 30px;
+    width: 25px;
     height: 3px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact .form-container h1::before {
+    left: -13%;
   }
 }
 
@@ -1935,6 +1953,19 @@ footer .footer-container .social-footer a {
   width: 500px;
 }
 
+@media screen and (max-width: 600px) {
+  #contact .form-container form {
+    width: 350px;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #contact .form-container form {
+    width: 300px;
+  }
+}
+
 #contact .form-container form .form-bigger-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1943,6 +1974,18 @@ footer .footer-container .social-footer a {
 
 #contact .form-container form .form-bigger-group .form-group {
   margin: 0 20px 0 0;
+}
+
+@media screen and (max-width: 600px) {
+  #contact .form-container form .form-bigger-group .form-group input {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #contact .form-container form .form-bigger-group .form-group input {
+    width: 120px;
+  }
 }
 
 #contact .form-container form .form-group {
@@ -1958,6 +2001,12 @@ footer .footer-container .social-footer a {
 
 #contact .form-container form .form-group label {
   margin-bottom: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  #contact .form-container form .form-group label {
+    font-size: .9rem;
+  }
 }
 
 #contact .form-container form .form-group input {
