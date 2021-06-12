@@ -282,8 +282,16 @@ nav .first-logo {
 @media screen and (max-width: 600px) {
   .header-container h1 {
     width: 90%;
-    font-size: 2.2rem;
+    font-size: 1.9rem;
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header-container h1 {
+    width: 100%;
+    font-size: 1.7rem;
+    line-height: 30px;
   }
 }
 
@@ -429,7 +437,13 @@ nav .first-logo {
 
 @media screen and (max-width: 600px) {
   .experience-container {
-    bottom: 15vh;
+    bottom: 200px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .experience-container {
+    bottom: 140px;
   }
 }
 

@@ -24,6 +24,11 @@
         @content
     }
 }
+@mixin phoneS{
+    @media screen and (max-width:360px){
+        @content
+    }
+}
 @mixin fold{
     @media screen and (max-width:320px){
         @content

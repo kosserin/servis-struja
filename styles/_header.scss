@@ -211,8 +211,14 @@ nav{
 
         @include phone{
             width: 90%;
-            font-size: 2.2rem;
+            font-size: 1.9rem;
             margin-bottom: 10px;
+        }
+
+        @include phoneS{
+            width: 100%;
+            font-size: 1.7rem;
+            line-height: 30px;
         }
 
         @include fold{
@@ -318,7 +324,11 @@ nav{
     }
 
     @include phone{
-        bottom: 15vh;
+        bottom: 200px;
+    }
+
+    @include phoneS{
+        bottom: 140px;
     }
     @include fold{
         right: 15%;
