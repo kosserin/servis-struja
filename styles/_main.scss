@@ -157,9 +157,9 @@
             color: $blue;
             padding: .9rem 3rem;
             border-radius: 30px;
-            border: 1px solid $blue;
+            border: 2px solid $blue;
             transition: all 300ms ease;
-            font-size: .9rem;
+            font-size: 1rem;
 
             @include phone{
                 font-size: .8rem;
@@ -302,7 +302,7 @@
                 color: $blue;
                 font-size: 2rem;
                 cursor: pointer;
-                border: 1px solid $blue;
+                border: 2px solid $blue;
                 padding: 1rem 1rem;
                 border-radius: 50%;
                 transition: all 300ms ease;
@@ -497,7 +497,7 @@
     p{
         color: $blue;
         width: 40%;
-        font-size: .9rem;
+        font-size: 1rem;
 
         @include laptop{
             width: 55%;
@@ -700,7 +700,7 @@
         padding:175px 50px;
         background: $blue;
 
-        @include phone{
+        @include tablet{
             padding: 75px 20px;
             background: rgba($color: $blue, $alpha: .8);
         }
@@ -709,11 +709,15 @@
             font-size: 2.5rem;
             color: $white;
 
-            @include mini{
+            @include laptop{
+                font-size: 2rem;
+            }
+
+            @include miniLaptop{
                 font-size: 1.5rem;
             }
 
-            @include phone{
+            @include tablet{
                 width: 100%;
             }
         }
@@ -726,7 +730,7 @@
                 font-size: .8rem;
             }
 
-            @include phone{
+            @include tablet{
                 width: 100%;
             }
         }
@@ -771,7 +775,7 @@
             top: 0;
             right: 0;
 
-            @include phone{
+            @include tablet{
                 width: 100%;
                 z-index: -1;
                 background: url('../who.jpg') no-repeat center;

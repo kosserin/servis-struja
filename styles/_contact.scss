@@ -1,6 +1,12 @@
 @import 'colors';
 @import 'media-queries';
 
+.naslov-stranice{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: $blue;
+}
+
 #contact{
     width: 90vw;
     margin: 75px auto;
@@ -13,13 +19,6 @@
     }
 
     .contact-container{
-        
-
-        h1{
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            color: $blue;
-        }
 
         h2{
             color: $blue;
