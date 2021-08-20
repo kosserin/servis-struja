@@ -14,6 +14,10 @@ footer{
         padding: 50px 15px;
     }
 
+    @include tablet{
+        padding: 50px 15px;
+    }
+
     @include phone{
         padding: 50px 15px 0 15px;
     }
