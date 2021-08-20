@@ -4,6 +4,10 @@
 .section1{
     width: 100vw;
     margin: 300px 0 200px 0;
+
+    @include mini{
+        margin-top: 200px;
+    }
     .services{
         display: flex;
         justify-content: center;
@@ -157,9 +161,9 @@
             color: $blue;
             padding: .9rem 3rem;
             border-radius: 30px;
-            border: 1px solid $blue;
+            border: 2px solid $blue;
             transition: all 300ms ease;
-            font-size: .9rem;
+            font-size: 1rem;
 
             @include phone{
                 font-size: .8rem;
@@ -236,8 +240,7 @@
     background: $white;
 
     .section2-container{
-        width: 90vw;
-        margin: 0 auto 0 auto;
+        width: 100vw;
 
         h2{
             padding-top: 40px;
@@ -258,7 +261,7 @@
             line-height: 45px;
             margin-top: 10px;
 
-            @include mini{
+            @include miniLaptop{
                 font-size: 2.5rem;
             }
 
@@ -287,8 +290,8 @@
         .quotes-container{
             position: relative;
             background: $white;
-            width: 100vw;
-            transform: translateX(-5vw);
+            width: 80vw;
+            margin: 0 auto;
             min-height: 600px;
             padding: 0px 0;
 
@@ -302,17 +305,26 @@
                 color: $blue;
                 font-size: 2rem;
                 cursor: pointer;
-                border: 1px solid $blue;
+                box-shadow: 1px 0px 10px 0px rgba(6,4,72,.1);
+                -webkit-box-shadow: 1px 0px 10px 0px rgba(6,4,72,.1);
+                -moz-box-shadow: 1px 0px 10px 0px rgba(6,4,72,.1);
                 padding: 1rem 1rem;
                 border-radius: 50%;
                 transition: all 300ms ease;
                 display: none;
-                @include mini{
+
+                @include miniLaptop{
                     display: block;
+                    top: auto;
+                    bottom: 150px;
+                    font-size: 1.2rem;
+                    padding: 1.5rem;
                 }
-                @include tablet{
-                    font-size: 1rem;
+
+                @include phone{
+                    bottom: 70px;
                 }
+
                 &:hover{
                     background: $blue;
                     color: $white;
@@ -321,23 +333,27 @@
             }
 
             .fa-arrow-left{
-                left: 20vw;
+                left: 30vw;
 
                 @include tablet{
-                    left: 7vw;
+                    left: 20vw;
                 }
+
                 @include phone{
-                    left: 3vw;
+                    left: 13vw;
                 }
             }
             .fa-arrow-right{
-                right: 20vw;
+                right: 30vw;
+                background: $blue;
+                color: $white;
 
                 @include tablet{
-                    right: 7vw;
+                    right: 20vw;
                 }
+
                 @include phone{
-                    right: 3vw;
+                    right: 13vw;
                 }
             }
         }
@@ -348,63 +364,140 @@
             display: flex;
             justify-content: space-between;
             padding: 0px 0 200px;
+            min-height: 800px;
+
+            @include tablet{
+                min-height: fit-content;
+                padding-bottom: 650px;
+            }
+
+            @include phone{
+                padding-bottom: 230px;
+            }
+
+            @include fold{
+                padding-bottom: 270px;
+            }
+
             .quote.active-quote{
 
-                @include mini{
+                @include miniLaptop{
                     display: block;
                 }
             }
             .quote{
-                box-shadow: 6px 0px 25px 0px rgba(6,4,72,.1);
-                -webkit-box-shadow: 6px 0px 25px 0px rgba(6,4,72,.1);
-                -moz-box-shadow: 6px 0px 25px 0px rgba(6,4,72,.1);
-                padding: 3rem;
-                border-radius: 10px;
+                box-shadow: 1px 4px 10px 0px rgba(6,4,72,.08);
+                -webkit-box-shadow: 1px 4px 10px 0px rgba(6,4,72,.08);
+                -moz-box-shadow: 1px 4px 10px 0px rgba(6,4,72,.08);
+                padding: 2rem;
+                border-radius: 40px;
                 color: $blue;
-                width: 25vw;
+                width: 30%;
                 transform: translateY(10vh);
                 margin: 0 auto;
-                background: rgba($blue,.1);
+                height: fit-content;
                 
                 @include laptop{
                     margin: 0 30px;
-                    padding: 1rem;
+                    padding: 2rem;
                 }
 
-                @include mini{
+                @include miniLaptop{
                     display: none;
                     position: absolute;
-                    margin: 0 30vw 0 30vw;
-                    width: 40vw;
+                    width: 60vw;
+                    left: 50%;
                     top: 10vh;
-                    transform: translateY(-50px);
+                    transform: translate(-50%,-50px);
+                    margin: 0;
+                    box-shadow: 1px 4px 10px 0px rgba(6,4,72,.18);
+                    -webkit-box-shadow: 1px 4px 10px 0px rgba(6,4,72,.18);
+                    -moz-box-shadow: 1px 4px 10px 0px rgba(6,4,72,.18);
                 }
                 @include tablet{
-                    width: 60vw;
-                    margin: 0 20vw 0 20vw;
+                    width: 50vw;
+                }
+
+                @include phone{
+                    width: 80vw;
+                }
+
+                @include fold{
+                    padding: 1.3rem;
+                    width: 90vw;
+                }
+
+                .stars{
+                    display: flex;
+                    justify-content: flex-start;
+
+                    i{
+                        color: $yellow;
+                        margin: 0 2px;
+                    }
+
+                    @include miniLaptop{
+                        justify-content: center;
+                    }
                 }
 
 
                 .quote-text{
                     margin-bottom: 30px;
                     min-height: 250px;
-                    font-size: .9rem;
+                    font-size: 1rem;
+                    text-align: left;
 
-                    @include laptop{
-                        font-size: .85rem;
+                    @include miniLaptop{
+                        text-align: center;
                     }
+
+                    @include tablet{
+                        font-size: 1rem;
+                        min-height: 180px;
+                    }
+
+                    @include phone{
+                        font-size: .9rem;
+                    }
+                }
+
+                .person{
+                    margin-top: 20px;
+                    position: relative;
+
+                    /* img{
+                        position: relative;
+                        transform: translateX(-50%);
+                        left: 50%;
+                        width: 140px;
+                        height: 140px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    } */
+
+
                 }
 
                 h1{
                     font-size: 1rem;
                     text-align: left;
+
+                    @include miniLaptop{
+                        text-align: center;
+                    }
                 }
 
                 .title{
                     color: $light;
+                    text-align: left;
 
                     @include laptop{
                         font-size: .8rem;
+                    }
+
+                    @include miniLaptop{
+                        text-align: center;
                     }
                 }
                 i{
@@ -443,13 +536,8 @@
     }
 
     @include phone{
-        width: 60vw;
-        margin: 0 35vw 0 5vw;
+        width: 90vw;
         min-height: 300px;
-    }
-
-    @include phoneS{
-        width: 70vw;
     }
 
     h2{
@@ -488,7 +576,7 @@
         }
 
         @include phone{
-            width: 80%;
+            width: 100%;
             font-size: 1.5rem;
             line-height: 25px;
         }
@@ -497,7 +585,7 @@
     p{
         color: $blue;
         width: 40%;
-        font-size: .9rem;
+        font-size: 1rem;
 
         @include laptop{
             width: 55%;
@@ -507,12 +595,8 @@
         }
 
         @include phone{
-            width: 70%;
+            width: 100%;
             font-size: .75rem;
-        }
-
-        @include phoneS{
-            width: 75%;
         }
     }
 
@@ -538,52 +622,43 @@
 
     .promo-image{
         position: absolute;
-        width: 500px;
-        height: 400px;
+        width: 450px;
+        height: 500px;
         background: url('../pozadina.jpg') no-repeat 0% 0%;
         background-size: cover;
-        right:-200px;
+        right:-100px;
         top: 50px;
 
         @include laptop{
              width: 400px;
              right: -140px;
+             height: 500px;
         }
 
         @include mini{
             width: 350px;
-            height: 300px;
+            height: 500px;
             top: 100px;
         }
 
         @include tablet{
-            width: 320px;
-            height: 250px;
-            right:-50px;
+            width: 250px;
+            height: 450px;
+            right:-10px;
         }
         
         @include phone{
-            /* right: -125px;
-            top: 150px;
-            height: 200px;
-            width: 300px; */
-            top: 120px;
+            top: 220px;
             height: 250px;
             width: 180px;
-            right: -120px;
+            right: -10px;
         }
 
-        @include phoneS{
-            height: 180px;
-            width: 100px;
-            right: -50px;
-            top: 150px;
+        @include fold{
+            height: 250px;
+            width: 150px;
+            right: -10px;
         }
-
-        /* @include fold{
-            right: 30px;
-            top: 370px;
-        } */
     }
 }
 
@@ -700,7 +775,7 @@
         padding:175px 50px;
         background: $blue;
 
-        @include phone{
+        @include tablet{
             padding: 75px 20px;
             background: rgba($color: $blue, $alpha: .8);
         }
@@ -709,11 +784,15 @@
             font-size: 2.5rem;
             color: $white;
 
-            @include mini{
+            @include laptop{
+                font-size: 2rem;
+            }
+
+            @include miniLaptop{
                 font-size: 1.5rem;
             }
 
-            @include phone{
+            @include tablet{
                 width: 100%;
             }
         }
@@ -726,7 +805,7 @@
                 font-size: .8rem;
             }
 
-            @include phone{
+            @include tablet{
                 width: 100%;
             }
         }
@@ -771,7 +850,7 @@
             top: 0;
             right: 0;
 
-            @include phone{
+            @include tablet{
                 width: 100%;
                 z-index: -1;
                 background: url('../who.jpg') no-repeat center;
