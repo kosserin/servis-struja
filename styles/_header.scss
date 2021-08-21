@@ -16,6 +16,21 @@
         background-position: 100% 100%;
         background-repeat: no-repeat;
     }
+
+    @include phone{
+        height: 40vh;
+        top: auto;
+        bottom: 0vh;
+        background: linear-gradient(to bottom, rgba($white,.3)), url('../services/21.jpg');
+        background-size: cover;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    @include fold{
+        height: 30vh;
+        bottom: 10vh;
+    }
 }
 
 .image-background{
@@ -203,7 +218,7 @@ nav{
         }
 
         @include phone{
-            width: 90%;
+            width: 100%;
             font-size: 2rem;
             margin-bottom: 10px;
         }
@@ -235,7 +250,7 @@ nav{
         }
 
         @include phone{
-            width: 80%;
+            width: 95%;
             font-size: .9rem;
             font-weight: 400;
             margin: 0 auto 0 ;
@@ -289,6 +304,8 @@ nav{
             @include phone{
                 padding: 1rem 2rem;
                 font-size: .85rem;
+                color: $white;
+                background: $blue;
             }
 
             &:hover{
@@ -312,7 +329,19 @@ nav{
     @include mini{
         left: auto;
         right: 50%;
+        bottom: 5vh;
         transform: translateX(50%);
+        background: rgba($blue,.1);
+    }
+
+    @include phone{
+        right: 2%;
+        transform: translateX(0);
+        background: rgba($white,.5);
+    }
+
+    @include fold{
+        bottom: 3vh;
         background: rgba($blue,.1);
     }
 
