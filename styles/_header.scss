@@ -184,7 +184,7 @@ nav{
     }
 
     @include phone{
-        padding-top: 10%;
+        padding-top: 5%;
     }
 
     @include fold{
@@ -220,7 +220,6 @@ nav{
         @include phone{
             width: 100%;
             font-size: 2rem;
-            margin-bottom: 10px;
         }
 
         @include phoneS{
@@ -233,6 +232,12 @@ nav{
             font-size: 1.5rem;
             width: 100%;
             line-height: 30px;
+        }
+    }
+
+    & h1:last-of-type{
+        @include phone{
+            margin-bottom: 10px;
         }
     }
 
@@ -257,8 +262,8 @@ nav{
         }
 
         @include fold{
-            font-size: .8rem;
-            width: 95%;
+            font-size: .7rem;
+            width: 100%;
         }
     }
 

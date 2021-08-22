@@ -244,7 +244,7 @@ nav .first-logo {
 
 @media screen and (max-width: 600px) {
   .header-container {
-    padding-top: 10%;
+    padding-top: 5%;
   }
 }
 
@@ -290,7 +290,6 @@ nav .first-logo {
   .header-container h1 {
     width: 100%;
     font-size: 2rem;
-    margin-bottom: 10px;
   }
 }
 
@@ -307,6 +306,12 @@ nav .first-logo {
     font-size: 1.5rem;
     width: 100%;
     line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header-container h1:last-of-type {
+    margin-bottom: 10px;
   }
 }
 
@@ -337,8 +342,8 @@ nav .first-logo {
 
 @media screen and (max-width: 320px) {
   .header-container p {
-    font-size: .8rem;
-    width: 95%;
+    font-size: .7rem;
+    width: 100%;
   }
 }
 
@@ -1028,9 +1033,9 @@ nav .first-logo {
 }
 
 .section2 .section2-container .quotes .quote {
-  box-shadow: 1px 4px 10px 0px rgba(6, 4, 72, 0.08);
-  -webkit-box-shadow: 1px 4px 10px 0px rgba(6, 4, 72, 0.08);
-  -moz-box-shadow: 1px 4px 10px 0px rgba(6, 4, 72, 0.08);
+  box-shadow: 1px 4px 15px 0px rgba(6, 4, 72, 0.06);
+  -webkit-box-shadow: 1px 4px 15px 0px rgba(6, 4, 72, 0.06);
+  -moz-box-shadow: 1px 4px 15px 0px rgba(6, 4, 72, 0.06);
   padding: 2rem;
   border-radius: 40px;
   color: #060448;
@@ -1090,13 +1095,13 @@ nav .first-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .section2 .section2-container .quotes .quote .stars i {
-  color: rgba(252, 247, 0, 0.4);
+  color: #244750;
   margin: 0 2px;
   font-size: 1.3rem;
 }
@@ -1113,7 +1118,7 @@ nav .first-logo {
   margin-bottom: 30px;
   min-height: 250px;
   font-size: 1rem;
-  text-align: left;
+  text-align: center;
 }
 
 @media screen and (max-width: 1180px) {
@@ -1151,7 +1156,7 @@ nav .first-logo {
 
 .section2 .section2-container .quotes .quote h1 {
   font-size: 1rem;
-  text-align: left;
+  text-align: center;
 }
 
 @media screen and (max-width: 1180px) {
@@ -1162,7 +1167,7 @@ nav .first-logo {
 
 .section2 .section2-container .quotes .quote .title {
   color: #244750;
-  text-align: left;
+  text-align: center;
 }
 
 @media screen and (max-width: 1280px) {
@@ -1327,8 +1332,8 @@ nav .first-logo {
 
 .section3 .promo-image {
   position: absolute;
-  width: 450px;
-  height: 500px;
+  width: 30vw;
+  height: 80vh;
   background: url("../pozadina.jpg") no-repeat 0% 0%;
   background-size: cover;
   right: -100px;
@@ -1416,7 +1421,6 @@ nav .first-logo {
 
 .section4 .section4-container .title-text {
   color: rgba(6, 4, 72, 0.8);
-  font-size: .9rem;
   width: 40%;
   margin: 0 auto;
 }
@@ -2008,11 +2012,13 @@ footer .center ul li a:hover {
 
 #contact .contact-container h2 {
   color: #060448;
+  font-size: 2.5rem;
 }
 
 #contact .contact-container p {
   color: #060448;
-  font-size: .9rem;
+  font-size: 1.1rem;
+  font-weight: 300;
 }
 
 #contact .contact-container i {
@@ -2024,11 +2030,31 @@ footer .center ul li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 20px 0;
+  margin: 40px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1180px) {
+  #contact .contact-container .items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 #contact .contact-container .items i {
   margin-right: 10px;
+}
+
+#contact .contact-container .items a {
+  text-decoration: none;
+  color: #244750;
+  border-bottom: 1px solid #244750;
 }
 
 #contact .contact-container .items.pib-mb {
@@ -2036,10 +2062,25 @@ footer .center ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media screen and (max-width: 1180px) {
+  #contact .contact-container .items.pib-mb {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 #contact .contact-container .items.pib-mb p {
   margin: 0 0 5px 0;
+  font-size: .9rem;
 }
 
 #contact .contact-container .items.pib-mb p span {
@@ -2066,16 +2107,22 @@ footer .center ul li a:hover {
   font-weight: 600;
 }
 
+@media screen and (max-width: 1180px) {
+  #contact .form-container h1 {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #contact .form-container h1 {
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin-left: 60px;
   }
 }
 
 @media screen and (max-width: 600px) {
   #contact .form-container h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -2097,15 +2144,15 @@ footer .center ul li a:hover {
   }
 }
 
-@media screen and (max-width: 600px) {
-  #contact .form-container h1::before {
-    left: -13%;
-  }
-}
-
 #contact .form-container p {
   font-size: .9rem;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1180px) {
+  #contact .form-container p {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2129,6 +2176,12 @@ footer .center ul li a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 500px;
+}
+
+@media screen and (max-width: 1180px) {
+  #contact .form-container form {
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -2204,6 +2257,7 @@ footer .center ul li a:hover {
   border-right: 2px solid #060448;
   border-top: 2px solid #060448;
   padding: .3rem;
+  outline: none;
 }
 
 #contact .form-container form input[type=submit] {
