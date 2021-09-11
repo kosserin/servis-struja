@@ -1,82 +1,82 @@
-@import 'colors';
-@import 'media-queries';
+@import "colors";
+@import "media-queries";
 
-#about{
-    display: flex;
-    flex-direction: row;
-    width: 80vw;
-    margin: 75px auto 150px auto;
+#about {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  margin: 75px auto 150px auto;
 
-    @include tablet{
-        flex-direction: column;
-        align-items: center;
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include phone {
+    margin: 100px auto;
+  }
+
+  & .image-container {
+    height: 400px;
+    width: 300px;
+    background: url("/struja100/pozadina.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      order: 2;
+      margin-top: 50px;
     }
 
-    @include phone{
-        margin: 100px auto;
+    @include phone {
+      height: 350px;
+      width: 250px;
     }
 
-    & .image-container{
-        height: 400px;
-        width: 300px;
-        background: url('../pozadina.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    @include fold {
+      height: 300px;
+      width: 200px;
+    }
+  }
 
-        @include tablet{
-            order: 2;
-            margin-top: 50px;
-        }
+  & .text-container {
+    width: 100%;
+    margin: 0 0 0 50px;
+    color: $blue;
 
-        @include phone{
-            height: 350px;
-            width: 250px;
-        }
-
-        @include fold{
-            height: 300px;
-            width: 200px;
-        }
+    @include tablet {
+      margin: 0;
     }
 
-    & .text-container{
-        width: 100%;
-        margin: 0 0 0 50px;
-        color: $blue;
+    & h1 {
+      font-size: 3.5rem;
+      line-height: 40px;
+      margin-bottom: 30px;
 
-        @include tablet{
-            margin: 0;
-        }
-
-        & h1{
-            font-size: 3.5rem;
-            line-height: 40px;
-            margin-bottom: 30px;
-
-            @include phone{
-                font-size: 2rem;
-            }
-        }
-
-        & p{
-            font-size: 1rem;
-
-            @include phone{
-                font-size: 0.85rem;
-            }
-        }
-
-        & p span{
-            font-weight: 500;
-        }
-
-        & a{
-            color: $blue;
-        }
-
-        & .bold-service{
-            font-weight: 600;
-        }
+      @include phone {
+        font-size: 2rem;
+      }
     }
+
+    & p {
+      font-size: 1rem;
+
+      @include phone {
+        font-size: 0.85rem;
+      }
+    }
+
+    & p span {
+      font-weight: 500;
+    }
+
+    & a {
+      color: $blue;
+    }
+
+    & .bold-service {
+      font-weight: 600;
+    }
+  }
 }
