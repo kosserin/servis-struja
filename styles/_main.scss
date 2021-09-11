@@ -4,6 +4,7 @@
 .section1{
     width: 100vw;
     margin: 300px 0 200px 0;
+    position: relative;
 
     @include mini{
         margin-top: 200px;
@@ -16,6 +17,13 @@
             width: 150px;
             height: 200px;
             margin: 0 5px;
+            cursor: pointer;
+            opacity: .9;
+
+            &:hover{
+                opacity: 1;
+            }
+
             @include tablet{
                 width: 100px;
             }
@@ -192,9 +200,45 @@
         padding: 2rem;
         transform: translateY(50px);
     } */
+
+    .section1-popup{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba($blue,.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 500ms ease;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        img{
+            max-width: 50vw;
+            max-height: 80vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+            @include mini{
+                max-width: 80vw;
+                max-height: 80vh;
+            }
+        }
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////
+
+.show-popup{
+    opacity: 1 !important;
+    pointer-events: all !important;
+    transition: all 500ms ease !important;
+    z-index: 10;
+}
 
 /* important */
 .fade-in{
@@ -684,6 +728,7 @@
     }
     
     .section4-container{
+        margin-top: 20%;
         text-align: center;
 
         .title-small{
@@ -788,11 +833,15 @@
     .section5-container{
         position: relative;
 
-        padding:175px 50px;
+        padding:280px 50px;
         background: $blue;
 
+        @include miniLaptop{
+            padding: 175px 50px;
+        }
+
         @include tablet{
-            padding: 75px 20px;
+            padding: 100px 20px;
             background: rgba($color: $blue, $alpha: .8);
         }
 
