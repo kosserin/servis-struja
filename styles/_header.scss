@@ -1,397 +1,406 @@
-@import 'colors';
-@import 'media-queries';
+@import "colors";
+@import "media-queries";
 
-.background{
-    position: absolute;
-    width: 100vw;
-    height: 80vh;
-    top: 0;
-    background: $white;
-    display: none;
-    @include mini{
-        display: block;
-        background: linear-gradient(to bottom, rgba($white,.7)), url('../services/21.jpg');
-        /* background: linear-gradient(to top,rgba($white,.75),rgba($white,.4),rgba($white,.7),rgba($white,.6),rgba($white,.3)), url('../pozadina.jpg'); */
-        background-size: cover;
-        background-position: 100% 100%;
-        background-repeat: no-repeat;
-    }
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  top: 0;
+  background: $white;
+  display: none;
+  @include mini {
+    display: block;
+    background: linear-gradient(to bottom, rgba($white, 0.7)),
+      url("/struja100/services/21.jpg");
+    /* background: linear-gradient(to top,rgba($white,.75),rgba($white,.4),rgba($white,.7),rgba($white,.6),rgba($white,.3)), url('../pozadina.jpg'); */
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+  }
 
-    @include phone{
-        height: 40vh;
-        top: auto;
-        bottom: 0vh;
-        background: linear-gradient(to bottom, rgba($white,.3)), url('../services/21.jpg');
-        background-size: cover;
-        background-position: 100% 100%;
-        background-repeat: no-repeat;
-    }
+  @include phone {
+    height: 40vh;
+    top: auto;
+    bottom: 0vh;
+    background: linear-gradient(to bottom, rgba($white, 0.3)),
+      url("/struja100/services/21.jpg");
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+  }
 
-    @include fold{
-        height: 30vh;
-        bottom: 10vh;
-    }
+  @include fold {
+    height: 30vh;
+    bottom: 10vh;
+  }
 }
 
-.image-background{
-    background: linear-gradient(to right,rgba($white,1),rgba($white,.9),rgba($white,.8),rgba($white,.7),rgba($white,.4),rgba($white,.4),rgba($white,.4),rgba($white,0),rgba($white,0),rgba($white,0),rgba($white,0),rgba($white,0)), url('../services/21.jpg');
-    background-size: cover;
-    width: 50%;
-    height: 80vh;
-    position: absolute;
-    top: 20vh;
-    right: 0vw;
-    @include mini{
-        display: none;
-    }
-
+.image-background {
+  background: linear-gradient(
+      to right,
+      rgba($white, 1),
+      rgba($white, 0.9),
+      rgba($white, 0.8),
+      rgba($white, 0.7),
+      rgba($white, 0.4),
+      rgba($white, 0.4),
+      rgba($white, 0.4),
+      rgba($white, 0),
+      rgba($white, 0),
+      rgba($white, 0),
+      rgba($white, 0),
+      rgba($white, 0)
+    ),
+    url("/struja100/services/21.jpg");
+  background-size: cover;
+  width: 50%;
+  height: 80vh;
+  position: absolute;
+  top: 20vh;
+  right: 0vw;
+  @include mini {
+    display: none;
+  }
 }
 
 ///////////////////////////////////////////////////////////////////////
- 
-nav{
-    z-index: 100;
-    display: flex;
-    flex-direction: row;
+
+nav {
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 12vh;
+  text-align: center;
+  align-items: center;
+  position: relative;
+
+  @include tablet {
     justify-content: space-around;
-    height: 12vh;
-    text-align: center;
-    align-items: center;
-    position: relative;
+  }
 
+  .nav-logo {
+    margin: 0 10px;
+  }
 
-    @include tablet{
-        justify-content: space-around;
+  .nav-logo img {
+    width: 85px;
+    transform: translate(0, 30px);
+    @include mini {
+      width: 75px;
+    }
+  }
+
+  .first-logo {
+    display: none;
+
+    & img {
+      @include mini {
+        width: 105px;
+        transform: translateY(6px);
+      }
     }
 
-    .nav-logo{
-        margin: 0 10px;
+    @include tablet {
+      display: flex;
     }
+  }
 
-    .nav-logo img{
-        width: 85px;
-        transform: translate(0,30px);
-        @include mini{
-            width: 75px;
-
-        }
+  .second-logo {
+    @include tablet {
+      display: none;
     }
-
-    .first-logo{
-        display: none;
-
-        & img{
-
-            @include mini{
-                width: 105px;
-                transform: translateY(6px);
-            }
-        }
-
-        @include tablet{
-            display: flex;
-        }
-    }
-
-    .second-logo{
-
-        @include tablet{
-            display: none;
-        }
-    }
+  }
 }
 /* Works only out of nav (: */
-.nav-links{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    list-style: none;
-    text-align: center;
-    align-items: center;
-    z-index: 100;
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+  align-items: center;
+  z-index: 100;
 
-    @include tablet{
-        position: absolute;
-        width: 100vw;
-        height: 88vh;
-        flex-direction: column;
-        top: 12vh;
-        right: 0px;
-        background-color: $white;
-        transform: translateX(100%);
-        transition: transform .3s ease;
-        z-index: 100;
-    }
-
-    & li{
-        margin: 0 40px;
-        @include tablet{
-            margin-bottom: 20px;
-        }
-
-        & a{
-            text-decoration: none;
-            font-weight: 500;
-            font-size: .9rem;
-            color: $blue;
-            position: relative;
-            text-align: center;
-
-            @include tablet{
-                font-size: 1.2rem;
-            }
-        }
-
-    }
-
-    .contact-tag{
-        display: inline-block !important;
-        border: 2px solid $blue !important;
-        padding: .5rem 2rem;
-        border-radius: 30px;
-        transition: all 300ms ease;
-        transform: translateY(2px);
-
-        &:hover{
-            background: $blue;
-            color: $white;
-            transition: all 300ms ease;
-        }
-    }
-}
-
-///////////////////////////////////////////////////////////////////////
- 
-.header-container{
-    width: 90vw;
-    height: 92vh;
-    display: flex;
-    flex-direction: column;
-    padding-top: 5%;
-    margin: auto;
-
-    @include laptop{
-    padding-top: 10%;
-    }
-
-    @include mini{
-        padding-top: 10%;
-    }
-
-    @include tablet{
-        padding-top: 5%;
-    }
-
-    @include phone{
-        padding-top: 5%;
-    }
-
-    @include fold{
-        padding-top: 15%;
-    }
-
-    & h1{
-        text-transform: uppercase;
-        color: $blue;
-        width: 55%;
-        font-size: 3.5rem;
-        line-height: 65px;
-        font-weight: 700;
-
-        @include laptop{
-            font-size: 2.8rem;
-            line-height: 50px;
-        }
-
-        @include mini{
-            font-size: 2.8rem;
-            text-align: center;
-            margin: 0 auto;
-            width: 70%;
-
-        }
-
-        @include tablet{
-            font-size: 2.5rem;
-            line-height: 40px;
-        }
-
-        @include phone{
-            width: 100%;
-            font-size: 2rem;
-        }
-
-        @include phoneS{
-            width: 100%;
-            font-size: 1.7rem;
-            line-height: 30px;
-        }
-
-        @include fold{
-            font-size: 1.5rem;
-            width: 100%;
-            line-height: 30px;
-        }
-    }
-
-    & h1:last-of-type{
-        @include phone{
-            margin-bottom: 10px;
-        }
-    }
-
-    & p{
-        color: $blue;
-        width: 40%;
-        font-size: 1rem;
-        margin-top: 10px;
-
-        @include mini{
-            text-align: center;
-            margin: 0 auto;
-            width: 70%;
-            margin-top: 10px;
-        }
-
-        @include phone{
-            width: 95%;
-            font-size: .9rem;
-            font-weight: 400;
-            margin: 0 auto 0 ;
-        }
-
-        @include fold{
-            font-size: .7rem;
-            width: 100%;
-        }
-    }
-
-    & .buttons{
-        margin-top: 40px;
-        @include mini{
-            display: flex;
-            justify-content: center;
-        }
-        @include phone{
-            flex-direction: column;
-            text-align: center;
-            margin-top: 10px;
-            margin: 0 auto;
-            width: 100%;
-            align-items: center;
-        }
-
-        a{
-            text-decoration: none;
-            color: $blue;
-            background: transparent;
-            border-radius: 30px;
-            padding: 1rem 2rem;
-            margin: 20px 0 0 0;
-            transition: all 300ms ease;
-            font-weight: 400;
-            border: 2px solid $blue;
-            text-align: center;
-            font-size: .9rem;
-
-            &:hover i{
-                transition: transform 300ms ease;
-                transform: translate(5px,1px);
-            }
-
-            i{
-                transition: transform 300ms ease;
-                transform: translate(0,1px);
-                margin-left: 10px;
-            }
-
-            @include phone{
-                padding: 1rem 2rem;
-                font-size: .85rem;
-                color: $white;
-                background: $blue;
-            }
-
-            &:hover{
-                background: $blue;
-                color: $white;
-                transition: all 300ms ease;
-            }
-        }
-    }
-}
-
-///////////////////////////////////////////////////////////////////////
- 
-.experience-container{
+  @include tablet {
     position: absolute;
-    bottom: 5vh;
-    right: 5vw;
-    padding: 1rem 1.5rem;
-    background: rgba($white,.6);
+    width: 100vw;
+    height: 88vh;
+    flex-direction: column;
+    top: 12vh;
+    right: 0px;
+    background-color: $white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 100;
+  }
 
-    @include mini{
-        left: auto;
-        right: 50%;
-        bottom: 5vh;
-        transform: translateX(50%);
-        background: rgba($blue,.1);
+  & li {
+    margin: 0 40px;
+    @include tablet {
+      margin-bottom: 20px;
     }
 
-    @include phone{
-        right: 2%;
-        transform: translateX(0);
-        background: rgba($white,.5);
+    & a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: $blue;
+      position: relative;
+      text-align: center;
+
+      @include tablet {
+        font-size: 1.2rem;
+      }
     }
+  }
 
-    @include fold{
-        bottom: 3vh;
-        background: rgba($blue,.1);
+  .contact-tag {
+    display: inline-block !important;
+    border: 2px solid $blue !important;
+    padding: 0.5rem 2rem;
+    border-radius: 30px;
+    transition: all 300ms ease;
+    transform: translateY(2px);
+
+    &:hover {
+      background: $blue;
+      color: $white;
+      transition: all 300ms ease;
     }
-
-    .experience{
-        display: flex;
-        align-items: center;
-        color: $blue;
-
-        h1{
-            margin-right: 15px;
-            font-size: 2.3rem;
-        }
-    }
-}
-
-.burger{
-
-    @include tablet{
-        cursor: pointer;
-        margin-right: 50px;
-
-        & div{
-            width: 25px;
-            height: 3px;
-            margin: 5px;
-            background-color: $blue;
-            transition: transform .3s ease;
-        }
-    }
+  }
 }
 
 ///////////////////////////////////////////////////////////////////////
- 
-.nav-active{
+
+.header-container {
+  width: 90vw;
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5%;
+  margin: auto;
+
+  @include laptop {
+    padding-top: 10%;
+  }
+
+  @include mini {
+    padding-top: 10%;
+  }
+
+  @include tablet {
+    padding-top: 5%;
+  }
+
+  @include phone {
+    padding-top: 5%;
+  }
+
+  @include fold {
+    padding-top: 15%;
+  }
+
+  & h1 {
+    text-transform: uppercase;
+    color: $blue;
+    width: 55%;
+    font-size: 3.5rem;
+    line-height: 65px;
+    font-weight: 700;
+
+    @include laptop {
+      font-size: 2.8rem;
+      line-height: 50px;
+    }
+
+    @include mini {
+      font-size: 2.8rem;
+      text-align: center;
+      margin: 0 auto;
+      width: 70%;
+    }
+
+    @include tablet {
+      font-size: 2.5rem;
+      line-height: 40px;
+    }
+
+    @include phone {
+      width: 100%;
+      font-size: 2rem;
+    }
+
+    @include phoneS {
+      width: 100%;
+      font-size: 1.7rem;
+      line-height: 30px;
+    }
+
+    @include fold {
+      font-size: 1.5rem;
+      width: 100%;
+      line-height: 30px;
+    }
+  }
+
+  & h1:last-of-type {
+    @include phone {
+      margin-bottom: 10px;
+    }
+  }
+
+  & p {
+    color: $blue;
+    width: 40%;
+    font-size: 1rem;
+    margin-top: 10px;
+
+    @include mini {
+      text-align: center;
+      margin: 0 auto;
+      width: 70%;
+      margin-top: 10px;
+    }
+
+    @include phone {
+      width: 95%;
+      font-size: 0.9rem;
+      font-weight: 400;
+      margin: 0 auto 0;
+    }
+
+    @include fold {
+      font-size: 0.7rem;
+      width: 100%;
+    }
+  }
+
+  & .buttons {
+    margin-top: 40px;
+    @include mini {
+      display: flex;
+      justify-content: center;
+    }
+    @include phone {
+      flex-direction: column;
+      text-align: center;
+      margin-top: 10px;
+      margin: 0 auto;
+      width: 100%;
+      align-items: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: $blue;
+      background: transparent;
+      border-radius: 30px;
+      padding: 1rem 2rem;
+      margin: 20px 0 0 0;
+      transition: all 300ms ease;
+      font-weight: 400;
+      border: 2px solid $blue;
+      text-align: center;
+      font-size: 0.9rem;
+
+      &:hover i {
+        transition: transform 300ms ease;
+        transform: translate(5px, 1px);
+      }
+
+      i {
+        transition: transform 300ms ease;
+        transform: translate(0, 1px);
+        margin-left: 10px;
+      }
+
+      @include phone {
+        padding: 1rem 2rem;
+        font-size: 0.85rem;
+        color: $white;
+        background: $blue;
+      }
+
+      &:hover {
+        background: $blue;
+        color: $white;
+        transition: all 300ms ease;
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+.experience-container {
+  position: absolute;
+  bottom: 5vh;
+  right: 5vw;
+  padding: 1rem 1.5rem;
+  background: rgba($white, 0.6);
+
+  @include mini {
+    left: auto;
+    right: 50%;
+    bottom: 5vh;
+    transform: translateX(50%);
+    background: rgba($blue, 0.1);
+  }
+
+  @include phone {
+    right: 2%;
     transform: translateX(0);
+    background: rgba($white, 0.5);
+  }
+
+  @include fold {
+    bottom: 3vh;
+    background: rgba($blue, 0.1);
+  }
+
+  .experience {
+    display: flex;
+    align-items: center;
+    color: $blue;
+
+    h1 {
+      margin-right: 15px;
+      font-size: 2.3rem;
+    }
+  }
 }
 
-.toggle .line1{
-    transform: rotate(45deg) translate(5px,6px);
+.burger {
+  @include tablet {
+    cursor: pointer;
+    margin-right: 50px;
+
+    & div {
+      width: 25px;
+      height: 3px;
+      margin: 5px;
+      background-color: $blue;
+      transition: transform 0.3s ease;
+    }
+  }
 }
 
-.toggle .line2{
-    opacity: 0;
+///////////////////////////////////////////////////////////////////////
+
+.nav-active {
+  transform: translateX(0);
 }
 
-.toggle .line3{
-    transform: rotate(-45deg) translate(5px,-6px);
+.toggle .line1 {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(-45deg) translate(5px, -6px);
 }

@@ -4,11 +4,11 @@ const clickSection = () => {
     const popupImage = document.querySelector('.section1-popup img')
     const images = document.querySelectorAll('.section1 .service');
     const imagesURL = [
-        '../section1/1.jpg',
-        '../section1/21.jpg',
-        '../section1/23.jpg',
-        '../section1/28.jpg',
-        '../section1/6.jpg'
+        '/struja100/section1/1.jpg',
+        '/struja100/section1/21.jpg',
+        '/struja100/section1/23.jpg',
+        '/struja100/section1/28.jpg',
+        '/struja100/section1/6.jpg'
     ]
 
     console.log(images)

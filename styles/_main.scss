@@ -678,7 +678,7 @@
     position: absolute;
     width: 30vw;
     height: 80vh;
-    background: url("../pozadina.jpg") no-repeat 0% 0%;
+    background: url("/struja100/pozadina.jpg") no-repeat 0% 0%;
     background-size: cover;
     right: -100px;
     top: 50px;
@@ -920,7 +920,7 @@
           rgba($blue, 0),
           rgba($blue, 0)
         ),
-        url("../who.jpg") no-repeat center;
+        url("/struja100/who.jpg") no-repeat center;
       background-size: cover;
       position: absolute;
       top: 0;
@@ -929,7 +929,7 @@
       @include tablet {
         width: 100%;
         z-index: -1;
-        background: url("../who.jpg") no-repeat center;
+        background: url("/struja100/who.jpg") no-repeat center;
         background-size: cover;
       }
     }
