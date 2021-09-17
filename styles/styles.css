@@ -9,7 +9,7 @@
 @media screen and (max-width: 970px) {
   .background {
     display: block;
-    background: linear-gradient(to bottom, rgba(231, 231, 231, 0.7)), url("/struja100/services/21.jpg");
+    background: linear-gradient(to bottom, rgba(231, 231, 231, 0.7)), url("/services/21.jpg");
     /* background: linear-gradient(to top,rgba($white,.75),rgba($white,.4),rgba($white,.7),rgba($white,.6),rgba($white,.3)), url('../pozadina.jpg'); */
     background-size: cover;
     background-position: 100% 100%;
@@ -21,7 +21,7 @@
     height: 40vh;
     top: auto;
     bottom: 0vh;
-    background: linear-gradient(to bottom, rgba(231, 231, 231, 0.3)), url("/struja100/services/21.jpg");
+    background: linear-gradient(to bottom, rgba(231, 231, 231, 0.3)), url("/services/21.jpg");
     background-size: cover;
     background-position: 100% 100%;
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@
 }
 
 .image-background {
-  background: linear-gradient(to right, #e7e7e7, rgba(231, 231, 231, 0.9), rgba(231, 231, 231, 0.8), rgba(231, 231, 231, 0.7), rgba(231, 231, 231, 0.4), rgba(231, 231, 231, 0.4), rgba(231, 231, 231, 0.4), rgba(231, 231, 231, 0), rgba(231, 231, 231, 0), rgba(231, 231, 231, 0), rgba(231, 231, 231, 0), rgba(231, 231, 231, 0)), url("/struja100/services/21.jpg");
+  background: linear-gradient(to right, #e7e7e7, rgba(231, 231, 231, 0.9), rgba(231, 231, 231, 0.8), rgba(231, 231, 231, 0.7), rgba(231, 231, 231, 0.4), rgba(231, 231, 231, 0.4), rgba(231, 231, 231, 0.4), rgba(231, 231, 231, 0), rgba(231, 231, 231, 0), rgba(231, 231, 231, 0), rgba(231, 231, 231, 0), rgba(231, 231, 231, 0)), url("/services/21.jpg");
   background-size: cover;
   width: 50%;
   height: 80vh;
@@ -434,13 +434,13 @@ nav .first-logo {
   }
 }
 .section1 .services .service:first-child {
-  background: url("/struja100/section1/1.jpg");
+  background: url("/servis-struja/section1/1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .section1 .services .service:nth-child(2) {
-  background: url("/struja100/section1/21.jpg");
+  background: url("/servis-struja/section1/21.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -448,7 +448,7 @@ nav .first-logo {
   top: -40px;
 }
 .section1 .services .service:nth-child(3) {
-  background: url("/struja100/section1/23.jpg");
+  background: url("/servis-struja/section1/23.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -456,7 +456,7 @@ nav .first-logo {
   top: -100px;
 }
 .section1 .services .service:nth-child(4) {
-  background: url("/struja100/section1/28.jpg");
+  background: url("/servis-struja/section1/28.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -464,7 +464,7 @@ nav .first-logo {
   top: -40px;
 }
 .section1 .services .service:nth-child(5) {
-  background: url("/struja100/section1/6.jpg");
+  background: url("/servis-struja/section1/6.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1104,7 +1104,7 @@ nav .first-logo {
   position: absolute;
   width: 30vw;
   height: 80vh;
-  background: url("/struja100/pozadina.jpg") no-repeat 0% 0%;
+  background: url("/servis-struja/pozadina.jpg") no-repeat 0% 0%;
   background-size: cover;
   right: -100px;
   top: 50px;
@@ -1343,7 +1343,7 @@ nav .first-logo {
 .section5 .section5-container .section5-image {
   width: 50%;
   height: 100%;
-  background: linear-gradient(to right, #060448, rgba(6, 4, 72, 0.9), rgba(6, 4, 72, 0.7), rgba(6, 4, 72, 0.5), rgba(6, 4, 72, 0.3), rgba(6, 4, 72, 0), rgba(6, 4, 72, 0), rgba(6, 4, 72, 0)), url("/struja100/who.jpg") no-repeat center;
+  background: linear-gradient(to right, #060448, rgba(6, 4, 72, 0.9), rgba(6, 4, 72, 0.7), rgba(6, 4, 72, 0.5), rgba(6, 4, 72, 0.3), rgba(6, 4, 72, 0), rgba(6, 4, 72, 0), rgba(6, 4, 72, 0)), url("/servis-struja/who.jpg") no-repeat center;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -1353,7 +1353,7 @@ nav .first-logo {
   .section5 .section5-container .section5-image {
     width: 100%;
     z-index: -1;
-    background: url("/struja100/who.jpg") no-repeat center;
+    background: url("/servis-struja/who.jpg") no-repeat center;
     background-size: cover;
   }
 }
@@ -1536,7 +1536,7 @@ footer .center ul li a:hover {
 #about .image-container {
   height: 400px;
   width: 300px;
-  background: url("/struja100/pozadina.jpg");
+  background: url("/servis-struja/pozadina.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
