@@ -33,13 +33,13 @@
       }
     }
     .service:first-child {
-      background: url("/struja100/section1/1.jpg");
+      background: url("/servis-struja/section1/1.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
     .service:nth-child(2) {
-      background: url("/struja100/section1/21.jpg");
+      background: url("/servis-struja/section1/21.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -47,7 +47,7 @@
       top: -40px;
     }
     .service:nth-child(3) {
-      background: url("/struja100/section1/23.jpg");
+      background: url("/servis-struja/section1/23.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -55,7 +55,7 @@
       top: -100px;
     }
     .service:nth-child(4) {
-      background: url("/struja100/section1/28.jpg");
+      background: url("/servis-struja/section1/28.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -63,7 +63,7 @@
       top: -40px;
     }
     .service:nth-child(5) {
-      background: url("/struja100/section1/6.jpg");
+      background: url("/servis-struja/section1/6.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -678,7 +678,7 @@
     position: absolute;
     width: 30vw;
     height: 80vh;
-    background: url("/struja100/pozadina.jpg") no-repeat 0% 0%;
+    background: url("/servis-struja/pozadina.jpg") no-repeat 0% 0%;
     background-size: cover;
     right: -100px;
     top: 50px;
@@ -920,7 +920,7 @@
           rgba($blue, 0),
           rgba($blue, 0)
         ),
-        url("/struja100/who.jpg") no-repeat center;
+        url("/servis-struja/who.jpg") no-repeat center;
       background-size: cover;
       position: absolute;
       top: 0;
@@ -929,7 +929,7 @@
       @include tablet {
         width: 100%;
         z-index: -1;
-        background: url("/struja100/who.jpg") no-repeat center;
+        background: url("/servis-struja/who.jpg") no-repeat center;
         background-size: cover;
       }
     }
